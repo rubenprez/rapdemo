@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>RubenPerezIII</title>
+  <meta name="author" content="RubenPerezIII">
+  <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <style>
+    body {
+      margin: 5px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: ();
+      background-size: cover;
+      background-position: center;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    header {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-inline: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+      text-align: center;
+      color: rgb(217, 129, 255);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+    }
+
+    /* Style for the clickable button */
+    .title-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #87f1ff; /* Change text color if necessary */      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      margin-bottom: 0px; /* Adjust as needed */
+    }
+
+    /* Style for the videos container */
+    .videos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 85px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    /* Style for each video */
+    .video {
+      flex: 1;
+      max-width: calc(33.33% - 20px);
+      position: relative;
+      margin: 0 0 20px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* Style for video dimensions */
+    video {
+      width: 100%;
+      height: auto;
+      min-width: 240px;
+    }
+
+    /* Adjust video size for smaller screens */
+    @media screen and (max-width: 768px) {
+      video {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    /* Style for section titles */
+    .section-titles {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-title {
+      margin: 0 20px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #000;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Style for overlay button */
+    .overlay-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #000;
+      cursor: pointer;
+      display: none; /* Initially hide the overlay button */
+    }
+
+    /* Show overlay button on hover */
+    .video:hover .overlay-button {
+      display: block;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Style for text section */
+    .text-section {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .text-section p {
+      color: #87f1ff;
+      font-size: 50px;
+      font-family: "Audiowide", sans-serif;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <!-- Clickable title button with adjusted surface area -->
+    <div class="title-wrapper" onclick="location.href='index.html';">
+      <div class="title-button">Ruben Perez III</div>
+    </div>
+    <!-- Section titles -->
+    <!--<div class="section-titles">
+      <h2 class="section-title"><a href="liveAV.html">Audio / Video / Lighting</a></h2>
+      <h2 class="section-title"><a href="sounds.html">Sounds</a></h2>
+      <h2 class="section-title"><a href="electronics.html">Electronics</a></h2>
+    </div> -->
+  </header>
+
+  <!-- Videos contaiiner -->
+  <div class="videos-container">
+    <!-- First video -->
+    <div class="video">
+      <a href="electronics.html">
+        <video autoplay loop muted>
+          <source src="media/cyberpunk_AR.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button class="overlay-button">Electronics</button>
+      </a>
+    </div>
+
+    <!-- Second video -->
+    <div class="video">
+      <a href="sounds.html" class="video-link">
+        <video autoplay loop muted>
+          <source src="media/cyberpunk_beats.mp4" type="video/mp4">
+        </video>
+        <button class="overlay-button">Sounds</button>
+      </a>
+    </div>
+
+    <!-- Third video -->
+    <div class="video">
+      <a href="liveAV.html">
+        <video autoplay loop muted>
+          <source src="media/cyberpunk_liveAV.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button class="overlay-button">Live AV</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Text section -->
+  <section class="text-section">
+    <p>Digital Media Specialist</p>
+  </section>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="About.html">About Me</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+
+</html>
