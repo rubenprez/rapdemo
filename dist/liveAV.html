@@ -2,110 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Ruben Perez III</title>
+  <title>RubenPerezIII</title>
   <meta name="author" content="RubenPerezIII">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
-  <link rel="stylesheet" href="/index.6dab377c.css">
-  <link rel="stylesheet" href="/index.47ca9330.css">
-  <link rel="stylesheet" href="/index.26871b4a.css">
+  <link rel="apple-touch-icon" href="/icon.83aa3da3.png">
+  <link rel="stylesheet" href="/normalize.1114379f.css">
+  <link rel="stylesheet" href="/main.c52e0fe2.css">
+  <link rel="stylesheet" type="css/extra.css" href="/extra.3bfa745b.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-
   <style>body {
-  background-position: center;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 0;
-  display: flex;
-}
-
-header {
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  text-align: center;
-  color: #d981ff;
-  font-family: Audiowide, sans-serif;
-  font-size: 24px;
-}
-
-.title-button {
-  cursor: pointer;
-  color: #87f1ff;
-  margin-bottom: 10px;
-  font-family: Audiowide, sans-serif;
-  font-size: 110px;
-  text-decoration: none;
-}
-
-.videos-container {
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 36px;
-  display: flex;
-}
-
-.video {
-  max-width: 640px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.video iframe {
-  width: 100%;
-  height: 360px;
-}
-
-.photo-caption {
-  text-align: center;
-  color: #d981ff;
-  margin: 10px 0 20px;
-  font-family: Audiowide, sans-serif;
-  font-size: 24px;
-}
-
-.gallery {
-  max-width: 640px;
-  margin-top: 20px;
-  position: relative;
-}
-
-.photo {
-  text-align: center;
-  display: none;
-}
-
-.photo.active {
-  display: block;
-}
-
-.prev, .next {
-  color: #fff;
-  cursor: pointer;
-  background-color: #00000080;
-  border: none;
-  padding: 10px;
-  font-size: 18px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-</style>
+      margin: 5px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
+    header {
+      text-align: center;
+      margin-top: 0;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 5px;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-inline: 20px;
+    }
+    h1, h2, h3, h4, h5, h6, p, a {
+      text-align: center;
+      color: rgb(217, 129, 255);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+    }
+    h1.text-effect {
+      font-size: 75px;
+    }
+    .title-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #87f1ff;
+      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      margin-bottom: 10px;
+    }
+    .section-titles {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .section-title {
+      margin: 50px 50px 0px 20px;
+    }
+    footer {
+      width: 100%;
+      background-color: #ffffff;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+    }
+    .videos-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 36px;
+      width: 100%;
+      overflow-x: hidden;
+      transition: margin-left 2s;
+    }
+    /* Style for gallery captions */
+    .photo-caption {
+      text-align: center;
+      color: rgb(217, 129, 255);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 18px;
+    }
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }</style>
 </head>
 <body>
   <header>
@@ -114,55 +121,62 @@ h1, h2, h3, h4, h5, h6, p {
 
   <!-- Videos container -->
   <div class="videos-container" id="videos-container">
-    <!-- Video embeds -->
-    <div class="video">
-      <iframe src="https://player.vimeo.com/video/1019023840" frameborder="0" allow="autoplay; fullscreen" title="Q Nightclub - LD"></iframe>
+    <!-- First Vimeo video embed -->
+    <div class="video vimeo-video" style="margin: 0;">
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1019023840?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Q Club"></iframe>
+      </div>
       <p>Q Nightclub - LD</p>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
-    <div class="video">
-      <iframe src="https://player.vimeo.com/video/1019020715" frameborder="0" allow="autoplay; fullscreen" title="Jazz Alley - FOH"></iframe>
+
+    <!-- Second Vimeo video embed -->
+    <div class="video vimeo-video" style="margin: 0;">
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1019020715?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Jazzalley"></iframe>
+      </div>
       <p>Jazz Alley - FOH</p>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
-    <div class="video">
-      <iframe src="https://player.vimeo.com/video/1019023886" frameborder="0" allow="autoplay; fullscreen" title="Q Club too"></iframe>
-      <p>Q Club too</p>
+
+    <!-- Third Vimeo video embed -->
+    <div class="video vimeo-video" style="margin: 0;">
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1019031977?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Solder Plate"></iframe>
+      </div>
+      <p>Solder Plate + LED</p>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   </div>
 
   <!-- Gallery -->
   <div class="gallery">
-    <div class="photo">
-      <img src="/jazzalley_stage.76de90e5.jpg" alt="Jazz Alley - Stage">
-      <p class="photo-caption">Jazz Alley Stage</p>
+    <div class="photo active">
+      <img class="jazz-alley-image" src="/jazzalley_m7cl.a38d643e.jpg" alt="Jazz Alley - FOH">
+      <p class="photo-caption">FOH M7CL Console</p>
     </div>
     <div class="photo">
-      <img src="/jazzalley_m7cl.ef6c8177.jpg" alt="Jazz Alley - FOH">
-      <p class="photo-caption">FOH M7CL Console</p>
+      <img class="jazz-alley-image" src="/jazzalley_stage.30bf3f58.jpg" alt="Jazz Alley - Stage">
+      <p class="photo-caption">Jazz Alley Stage</p>
     </div>
     <button class="prev" onclick="prevPhoto()">&#10094;</button>
     <button class="next" onclick="nextPhoto()">&#10095;</button>
   </div>
-        
-  <script>const photos = document.querySelectorAll(".photo");
-let currentIndex = 0;
+
+  <script>var photos = document.querySelectorAll('.photo');
+var currentIndex = 0;
 function showPhoto(index) {
-    photos.forEach((photo, idx)=>{
-        photo.classList.toggle("active", idx === index);
-    });
+  photos.forEach(function (photo, idx) {
+    photo.classList.toggle('active', idx === index);
+  });
 }
 function prevPhoto() {
-    currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-    showPhoto(currentIndex);
+  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+  showPhoto(currentIndex);
 }
 function nextPhoto() {
-    currentIndex = (currentIndex + 1) % photos.length;
-    showPhoto(currentIndex);
-}
-// Automatically show the first photo when the page loads
-document.addEventListener("DOMContentLoaded", ()=>{
-    showPhoto(currentIndex);
-});
-
-</script>
-<script src="/liveAV.79bbb0f3.js"></script></body>
+  currentIndex = (currentIndex + 1) % photos.length;
+  showPhoto(currentIndex);
+}</script>
+</body>
 </html>

@@ -12,152 +12,166 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
-  <link rel="stylesheet" href="/index.6dab377c.css">
-  <link rel="stylesheet" href="/index.47ca9330.css">
-  <link rel="stylesheet" type="css/extra.css" href="/index.26871b4a.css">
+  <link rel="apple-touch-icon" href="/icon.83aa3da3.png">
+  <link rel="stylesheet" href="/normalize.1114379f.css">
+  <link rel="stylesheet" href="/main.c52e0fe2.css">
+  <link rel="stylesheet" type="css/extra.css" href="/extra.3bfa745b.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <style>body {
-  background-image: ();
-  background-position: center;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 0;
-  display: flex;
-  overflow-x: hidden;
-}
+      margin: 5px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: ();
+      background-size: cover;
+      background-position: center;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
 
-header {
-  text-align: center;
-  margin-top: 0;
-}
+    header {
+      text-align: center;
+      margin-top: 0;
+    }
 
-nav ul {
-  text-align: center;
-  margin-top: 0;
-  padding: 0;
-  list-style-type: none;
-}
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 0;
+      text-align: center;
+    }
 
-nav ul li {
-  margin-inline: 0;
-  display: inline;
-}
+    nav ul li {
+      display: inline;
+      margin-inline: 0;
+    }
 
-h1, h2, h3, h4, h5, h6, p, a {
-  text-align: center;
-  color: #d981ff;
-  font-family: Audiowide, sans-serif;
-  font-size: 24px;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+      text-align: center;
+      color: rgb(217, 129, 255);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+    }
 
-.title-button {
-  cursor: pointer;
-  color: #87f1ff;
-  margin-bottom: 0;
-  font-family: Audiowide, sans-serif;
-  font-size: 110px;
-  text-decoration: none;
-}
+    /* Style for the clickable button */
+    .title-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #87f1ff; /* Change text color if necessary */      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      margin-bottom: 0px; /* Adjust as needed */
+    }
 
-.videos-container {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 85px;
-  display: flex;
-}
+    /* Style for the videos container */
+    .videos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 85px;
+      max-width: 1200px;
+      width: 100%;
+    }
 
-.video {
-  opacity: 0;
-  flex: 1;
-  max-width: calc(33.33% - 20px);
-  margin: 0 0 20px;
-  animation: 1s forwards fadeIn;
-  position: relative;
-}
+    /* Style for each video */
+    .video {
+      flex: 1;
+      max-width: calc(33.33% - 20px);
+      position: relative;
+      margin: 0 0 20px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
 
-video {
-  width: 100%;
-  min-width: 240px;
-  height: auto;
-}
+    /* Style for video dimensions */
+    video {
+      width: 100%;
+      height: auto;
+      min-width: 240px;
+    }
 
-@media screen and (width <= 768px) {
-  video {
-    flex: 1 0 100%;
-    max-width: 100%;
-  }
-}
+    /* Adjust video size for smaller screens */
+    @media screen and (max-width: 768px) {
+      video {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+    }
 
-.section-titles {
-  justify-content: center;
-  margin-bottom: 0;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
+    /* Style for section titles */
+    .section-titles {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-.section-title {
-  margin: 0 20px;
-}
+    .section-title {
+      margin: 0 20px;
+    }
 
-footer {
-  text-align: center;
-  background-color: #000;
-  width: 100%;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-}
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #000;
+      padding: 10px 0;
+      text-align: center;
+    }
 
-.overlay-button {
-  color: #000;
-  cursor: pointer;
-  background-color: #ffffff80;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+    /* Style for overlay button */
+    .overlay-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #000;
+      cursor: pointer;
+      display: none; /* Initially hide the overlay button */
+    }
 
-.video:hover .overlay-button {
-  display: block;
-}
+    /* Show overlay button on hover */
+    .video:hover .overlay-button {
+      display: block;
+    }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
-  100% {
-    opacity: 1;
-  }
-}
+    /* Style for text section */
+    .text-section {
+      text-align: center;
+      margin-top: 0;
+    }
 
-.text-section {
-  text-align: center;
-  margin-top: 0;
-}
-
-.text-section p {
-  color: #87f1ff;
-  font-family: Audiowide, sans-serif;
-  font-size: 50px;
-}
-</style>
-</head>
+    .text-section p {
+      color: #87f1ff;
+      font-size: 50px;
+      font-family: "Audiowide", sans-serif;
+    }</style>
+<script src="/normalize.1114379f.js"></script><script src="/main.c52e0fe2.js"></script><script src="/extra.3bfa745b.js"></script><script src="/electronics.js"></script></head>
 
 <body>
 
@@ -180,7 +194,7 @@ footer {
     <div class="video">
       <a href="/electronics.html">
         <video autoplay="" loop="" muted="">
-          <source src="/cyberpunk_AR.3d7708dd.mp4" type="video/mp4">
+          <source src="/cyberpunk_AR.8a87f209.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <button class="overlay-button">Electronics</button>
@@ -191,7 +205,7 @@ footer {
     <div class="video">
       <a href="/sounds.html" class="video-link">
         <video autoplay="" loop="" muted="">
-          <source src="/cyberpunk_beats.5dbd5363.mp4" type="video/mp4">
+          <source src="/cyberpunk_beats.a6690af5.mp4" type="video/mp4">
         </video>
         <button class="overlay-button">Sounds</button>
       </a>
@@ -201,7 +215,7 @@ footer {
     <div class="video">
       <a href="/liveAV.html">
         <video autoplay="" loop="" muted="">
-          <source src="/cyberpunk_liveAV.08490ebd.mp4" type="video/mp4">
+          <source src="/cyberpunk_liveAV.93426585.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <button class="overlay-button">Live AV</button>
@@ -222,6 +236,6 @@ footer {
     </nav>
   </footer>
 
-<script src="/rapdemo.3464ddca.js"></script></body>
+</body>
 
 </html>

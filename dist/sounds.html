@@ -14,140 +14,121 @@
 
   <!-- Favicon and Web Manifest -->
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
+  <link rel="apple-touch-icon" href="/icon.83aa3da3.png">
 
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="/index.6dab377c.css">
-  <link rel="stylesheet" href="/index.47ca9330.css">
-  <link rel="stylesheet" href="/index.26871b4a.css">
+  <link rel="stylesheet" href="/normalize.1114379f.css">
+  <link rel="stylesheet" href="/main.c52e0fe2.css">
+  <link rel="stylesheet" href="/extra.3bfa745b.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 
   <style>body {
-  background-position: center;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 0;
-  display: flex;
-}
-
-header {
-  text-align: center;
-  margin-top: 0;
-}
-
-nav ul {
-  text-align: center;
-  margin-top: 5px;
-  padding: 0;
-  list-style-type: none;
-}
-
-nav ul li {
-  margin-inline: 20px;
-  display: inline;
-}
-
-h1, h2, h3, h4, h5, h6, p, a {
-  text-align: center;
-  color: #d981ff;
-  font-family: Audiowide, sans-serif;
-  font-size: 42px;
-}
-
-h1.text-effect {
-  font-size: 75px;
-}
-
-.title-button {
-  cursor: pointer;
-  color: #87f1ff;
-  margin-bottom: 10px;
-  font-family: Audiowide, sans-serif;
-  font-size: 110px;
-  text-decoration: none;
-}
-
-.section-titles {
-  justify-content: center;
-  margin-bottom: 30px;
-  display: flex;
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.section-title {
-  margin: 50px 50px 0 20px;
-}
-
-.videos-container {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 0;
-  transition: margin-left 2s;
-  display: flex;
-  overflow-x: auto;
-}
-
-@media screen and (width <= 768px) {
-  video {
-    width: 90%;
-    height: auto;
-  }
-}
-
-.music-section {
-  color: #576062;
-  text-align: center;
-  opacity: 0;
-  background-color: #000;
-  padding: 0;
-  animation: 3s forwards fade-in;
-  position: relative;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(2);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.resume-links {
-  margin-bottom: 0;
-}
-
-.music-player {
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-  display: flex;
-}
-
-.audio-track {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.audio-title {
-  margin-bottom: 15px;
-  font-size: 25px;
-}
-
-canvas {
-  width: 100%;
-  height: 150px;
-}
-</style>
+      margin: 5px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
+    header {
+      text-align: center;
+      margin-top: 0;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 5px;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-inline: 20px;
+    }
+    h1, h2, h3, h4, h5, h6, p, a {
+      text-align: center;
+      color: rgb(217, 129, 255);
+      font-family: "Audiowide", sans-serif;
+      font-size: 42px;
+    }
+    h1.text-effect {
+      font-size: 75px;
+    }
+    .title-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #87f1ff;
+      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      margin-bottom: 10px;
+    }
+    .section-titles {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .section-title {
+      margin: 50px 50px 0px 20px;
+    }
+    .videos-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      width: 100%;
+      overflow-x: auto;
+      transition: margin-left 2s;
+    } 
+    @media screen and (max-width: 768px) {
+      video {
+        width: 90%;
+        height: auto;
+      }
+    }
+    .music-section {
+      background-color: rgb(0, 0, 0);
+      color: #576062;
+      padding: 0px;
+      text-align: center;
+      opacity: 0;
+      animation: fade-in 3s forwards;
+      position: relative;
+    }
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: scale(2);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .resume-links {
+      margin-bottom: 0px;
+    }
+    .music-player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .audio-track {
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    .audio-title {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+    canvas {
+      width: 100%;
+      height: 150px;
+    }</style>
 </head>
 
 <body>
@@ -174,50 +155,46 @@ canvas {
   </section>
 
   <!-- Google Analytics -->
-  <script>window.ga = function() {
-    ga.q.push(arguments);
+  <script>window.ga = function () {
+  ga.q.push(arguments);
 };
 ga.q = [];
-ga.l = +new Date;
-ga("create", "UA-XXXXX-Y", "auto");
-
-</script>
+ga.l = +new Date();
+ga('create', 'UA-XXXXX-Y', 'auto');</script>
   <script src="https://www.google-analytics.com/analytics.js" async=""></script>
 
   <!-- JavaScript for audio equalizer spectrum visualizer -->
-  <script>const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioContext = new AudioContext();
-const audioElements = document.querySelectorAll("audio");
-const analysers = Array.from(audioElements).map((audio)=>{
-    const analyser = audioContext.createAnalyser();
-    analyser.fftSize = 256;
-    const audioSource = audioContext.createMediaElementSource(audio);
-    audioSource.connect(analyser);
-    audioSource.connect(audioContext.destination);
-    return analyser;
+  <script>var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioContext = new AudioContext();
+var audioElements = document.querySelectorAll('audio');
+var analysers = Array.from(audioElements).map(function (audio) {
+  var analyser = audioContext.createAnalyser();
+  analyser.fftSize = 256;
+  var audioSource = audioContext.createMediaElementSource(audio);
+  audioSource.connect(analyser);
+  audioSource.connect(audioContext.destination);
+  return analyser;
 });
-const canvas = document.getElementById("equalizer");
-const canvasContext = canvas.getContext("2d");
+var canvas = document.getElementById('equalizer');
+var canvasContext = canvas.getContext('2d');
 function draw() {
-    const bufferLength = analysers[0].frequencyBinCount;
-    const dataArray = new Uint8Array(bufferLength);
-    canvasContext.clearRect(0, 0, canvas.width, canvas.height);
-    analysers.forEach((analyser)=>{
-        analyser.getByteFrequencyData(dataArray);
-        const barWidth = canvas.width / bufferLength;
-        let x = 0;
-        for(let i = 0; i < bufferLength; i++){
-            const barHeight = dataArray[i] / 2;
-            canvasContext.fillStyle = `rgba(103, 177, 246, ${barHeight / 100})`;
-            canvasContext.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-            x += barWidth + 1;
-        }
-    });
-    requestAnimationFrame(draw);
+  var bufferLength = analysers[0].frequencyBinCount;
+  var dataArray = new Uint8Array(bufferLength);
+  canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+  analysers.forEach(function (analyser) {
+    analyser.getByteFrequencyData(dataArray);
+    var barWidth = canvas.width / bufferLength;
+    var x = 0;
+    for (var i = 0; i < bufferLength; i++) {
+      var barHeight = dataArray[i] / 2;
+      canvasContext.fillStyle = "rgba(103, 177, 246, ".concat(barHeight / 100, ")");
+      canvasContext.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+      x += barWidth + 1;
+    }
+  });
+  requestAnimationFrame(draw);
 }
-draw();
+draw();</script>
 
-</script>
-
-<script src="/sounds.dbed8892.js"></script></body>
+</body>
 </html>
