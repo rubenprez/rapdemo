@@ -585,6 +585,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"9npdu":[function(require,module,exports) {
 
-},{}]},["jReNk","9npdu"], "9npdu", "parcelRequireb7cf")
+},{}]},["jReNk","9npdu"], "9npdu", "parcelRequire716c")
 
 //# sourceMappingURL=electronics.a9af8ec1.js.map

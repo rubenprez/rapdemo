@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>RubenPerezIII</title>
+  <title>Ruben Perez III</title>
   <meta name="author" content="RubenPerezIII">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
+  <link rel="stylesheet" href="css/extra.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <style>
     body {
@@ -23,7 +19,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-image: ();
       background-size: cover;
       background-position: center;
     }
@@ -31,128 +26,59 @@
       text-align: center;
       margin-top: 0;
     }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin-top: 5px;
-      text-align: center;
-    }
-    nav ul li {
-      display: inline;
-      margin-inline: 20px;
-    }
-    h1, h2, h3, h4, h5, h6, p, a {
+    h1, h2, h3, h4, h5, h6, p {
       text-align: center;
       color: rgb(217, 129, 255);
       font-family: "Audiowide", sans-serif;
       font-size: 24px;
     }
-    h1.text-effect {
-      font-size: 75px;
-    }
-    /* Style for the clickable button */
     .title-button {
       cursor: pointer;
       text-decoration: none;
-      color: #87f1ff; /* Change text color if necessary */
+      color: #87f1ff;
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
       margin-bottom: 10px;
     }
-    /* Style for section titles */
-    .section-titles {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-      position: fixed;
-      top: 10px;
-      /* Adjust as needed */
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .section-title {
-      margin: 50px 50px 0px 20px;
-    }
-
-    footer {
-      width: 100%;
-      background-color: #ffffff; /* Adjust background color as needed */
-      padding: 10px 0;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-    }
-
-
-
-
-    /* Style for the videos container */
     .videos-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       margin-top: 36px;
-      margin-bottom: 0px;
       width: 100%;
-      overflow-x: hidden;
-      transition: margin-left 2s;
     }
-    /* Style for each video */
     .video {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
+      position: relative;
+      width: 100%;
+      max-width: 640px; /* Set a maximum width for the videos */
+      margin-bottom: 20px; /* Space between videos */
     }
-    /* Style for video dimensions */
-    video {
-      width: 640px;
-      height: 360px;
-      transition: transform 0.5s ease-in-out;
+    .video iframe {
+      width: 100%;
+      height: 360px; /* Set a fixed height for the videos */
     }
-    @media screen and (max-width: 768px) {
-      video {
-        width: 90%;
-        height: auto;
-      }
+    .photo-caption {
+      text-align: center;
+      color: rgb(217, 129, 255);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
-    @keyframes particle-animation {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) rotate(720deg);
-        opacity: 0;
-      }
+    .gallery {
+      position: relative;
+      width: 100%;
+      max-width: 640px; /* Set a maximum width for the gallery */
+      margin-top: 20px; /* Space above gallery */
     }
-    /* Fade-in animation */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+    .photo {
+      display: none; /* Hide all photos by default */
+      text-align: center;
     }
-
-
-    /* Style for gallery captions */
-.photo-caption {
-  text-align: center;
-  color: rgb(217, 129, 255); /* Adjust color if necessary */
-  font-family: "Audiowide", sans-serif;
-  font-size: 24px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-
-    /* Previous and Next buttons */
-    .prev,
-    .next {
+    .photo.active {
+      display: block; /* Show only active photo */
+    }
+    .prev, .next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -163,215 +89,68 @@
       padding: 10px;
       font-size: 18px;
     }
-
-    .prev {
-      left: 0;
-    }
-
-    .next {
-      right: 0;
-    }
-
+    .prev { left: 0; }
+    .next { right: 0; }
   </style>
 </head>
 <body>
   <header>
-    <!-- Clickable title button -->
     <div class="title-button" onclick="location.href='index.html';">Ruben Perez III</div>
-    <!-- Section titles -->
-    <!-- <div class="section-titles">
-      <h2 class="section-title"><a href="liveAV.html">Sound/Lighting</a></h2>
-      <h2 class="section-title"><a href="beats.html">Beats</a></h2>
-      <h2 class="section-title"><a href="electronics.html">Electronics</a></h2>
-    </div> -->
-  </header> 
-  
-  <!-- <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
-      <li><a href="About.html">About</a></li>
-    </ul>
-  </nav> -->
+  </header>
 
   <!-- Videos container -->
   <div class="videos-container" id="videos-container">
-    <!-- First video -->
-    <div class="video qclub-video" style="margin: 0;">
-      <video controls class="qclub-video">
-        <source src="media/qclub_3_clip.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <!-- Video embeds -->
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/1019023840" 
+              frameborder="0" allow="autoplay; fullscreen" title="Q Nightclub - LD"></iframe>
       <p>Q Nightclub - LD</p>
-      <!-- Add text description here -->
     </div>
-    <!-- Second video -->
-    <div class="video jazz-alley-video" style="margin: 0;">
-      <video controls class="jazz-alley-video">
-        <source src="media/jazzalley_1_clip.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/1019020715" 
+              frameborder="0" allow="autoplay; fullscreen" title="Jazz Alley - FOH"></iframe>
       <p>Jazz Alley - FOH</p>
-      <!-- Add text description here -->
     </div>
-    <!-- Third video -->
-    <div class="video jazz-alley-video" style="margin: 0;">
-      <video controls class="jazz-alley-video">
-        <source src="media/qclub_iphone_clip_2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Q Nightclub - LD</p>
-      <!-- Add text description here -->
-    </div>
-    <!-- Fourth video -->
-    <div class="video jazz-alley-video" style="margin: 0;">
-      <video controls class="jazz-alley-video">
-        <source src="media/jazzalley_iphone_clip_4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Jazz Alley - FOH</p>
-      <!-- Add text description here -->
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/1019023886" 
+              frameborder="0" allow="autoplay; fullscreen" title="Q Club too"></iframe>
+      <p>Q Club too</p>
     </div>
   </div>
 
-<!-- Gallery -->
-<div class="gallery">
-  <!-- Photos -->
-  <div class="photo active">
-    <img class="jazz-alley-image" src="media/jazzalley_m7cl.jpg" alt="Jazz Alley - FOH">
-    <p class="photo-caption">FOH M7CL Console</p>
-  </div>
-  <div class="photo">
-    <img class="jazz-alley-image" src="media/jazzalley_stage.jpg" alt="Jazz Alley - Stage">
-    <p class="photo-caption">Jazz Alley Stage</p>
-  </div>
-  <div class="photo">
-    <img class="jazz-alley-image" src="media/jazzalley_stageright.jpg" alt="Jazz Alley - Stage Right">
-    <p class="photo-caption">Stage Right</p>
+  <!-- Gallery -->
+  <div class="gallery">
+    <div class="photo active">
+      <img src="media/jazzalley_m7cl.jpg" alt="Jazz Alley - FOH">
+      <p class="photo-caption">FOH M7CL Console</p>
+    </div>
+    <div class="photo">
+      <img src="media/jazzalley_stage.jpg" alt="Jazz Alley - Stage">
+      <p class="photo-caption">Jazz Alley Stage</p>
+    </div>
+    <button class="prev" onclick="prevPhoto()">&#10094;</button>
+    <button class="next" onclick="nextPhoto()">&#10095;</button>
   </div>
 
-  <!-- Previous and Next buttons -->
-  <button class="prev" onclick="prevPhoto()">&#10094;</button>
-  <button class="next" onclick="nextPhoto()">&#10095;</button>
-</div>
+  <script>
+    const photos = document.querySelectorAll('.photo');
+    let currentIndex = 0;
 
+    function showPhoto(index) {
+      photos.forEach((photo, idx) => {
+        photo.classList.toggle('active', idx === index);
+      });
+    }
 
-<style>
-  /* Style for Previous and Next buttons */
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-    z-index: 999;
-  }
+    function prevPhoto() {
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      showPhoto(currentIndex);
+    }
 
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-</style>
-
-
-<script>
-  // Get all images and buttons
-  const photos = document.querySelectorAll('.photo');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
-  const enlargedImagesContainer = document.getElementById('enlargedImages');
-
-  // Initialize current index
-  let currentIndex = 0;
-
-  // Function to show the current photo and hide others
-  function showPhoto(index) {
-    photos.forEach((photo, idx) => {
-      if (idx === index) {
-        photo.classList.add('active');
-      } else {
-        photo.classList.remove('active');
-      }
-    });
-  }
-
-  // Function to show previous photo
-  function prevPhoto() {
-    currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-    showPhoto(currentIndex);
-  }
-
-  // Function to show next photo
-  function nextPhoto() {
-    currentIndex = (currentIndex + 1) % photos.length;
-    showPhoto(currentIndex);
-  }
-
-  // Add click event listeners to previous and next buttons
-  prevButton.addEventListener('click', prevPhoto);
-  nextButton.addEventListener('click', nextPhoto);
-
-  // Add click event listener to each photo to enlarge
-  photos.forEach((photo, index) => {
-    photo.addEventListener('click', () => {
-      enlargedImagesContainer.innerHTML = '';
-      const img = photo.querySelector('img').cloneNode(true);
-      enlargedImagesContainer.appendChild(img);
-      enlargedImagesContainer.classList.add('enlarged');
-    });
-  });
-
-  // Add click event listener to close enlarged image
-  enlargedImagesContainer.addEventListener('click', () => {
-    enlargedImagesContainer.classList.remove('enlarged');
-  });
-</script>
-
-<style>
-  /* Style for previous and next buttons */
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-    z-index: 9999;
-  }
-
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-
-  /* Hide scrollbars when image enlarged */
-  body.enlarged {
-    overflow: hidden;
-  }
-</style>
-
-<!-- <footer>
-  <nav>
-    <ul>
-    </ul>
-  </nav>
-</footer>  -->
-
-
+    function nextPhoto() {
+      currentIndex = (currentIndex + 1) % photos.length;
+      showPhoto(currentIndex);
+    }
+  </script>
 </body>
 </html>
