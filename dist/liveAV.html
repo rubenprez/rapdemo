@@ -135,17 +135,21 @@ h1, h2, h3, h4, h5, h6, p {
   <div class="gallery">
     <div class="photo active">
       <img src="/jazzalley_m7cl.ef6c8177.jpg" alt="Jazz Alley - FOH">
-      <p class="photo-caption">FOH M7CL Console</p>
-    </div>
-    <div class="photo">
-      <img src="/jazzalley_stage.76de90e5.jpg" alt="Jazz Alley - Stage">
-      <p class="photo-caption">Jazz Alley Stage</p>
-    </div>
-    <button class="prev" onclick="prevPhoto()">&#10094;</button>
-    <button class="next" onclick="nextPhoto()">&#10095;</button>
-  </div>
-
-  <script>const photos = document.querySelectorAll(".photo");
+      <p class="<!-- Gallery -->
+        <div class=" gallery"="">
+          </p><div class="photo active">
+            <img src="/jazzalley_m7cl.ef6c8177.jpg" alt="Jazz Alley - FOH">
+            <p class="photo-caption">FOH M7CL Console</p>
+          </div>
+          <div class="photo">
+            <img src="/jazzalley_stage.76de90e5.jpg" alt="Jazz Alley - Stage">
+            <p class="photo-caption">Jazz Alley Stage</p>
+          </div>
+          <button class="prev" onclick="prevPhoto()">&#10094;</button>
+          <button class="next" onclick="nextPhoto()">&#10095;</button>
+        </div>
+        
+        <script>const photos = document.querySelectorAll(".photo");
 let currentIndex = 0;
 function showPhoto(index) {
     photos.forEach((photo, idx)=>{
@@ -160,7 +164,12 @@ function nextPhoto() {
     currentIndex = (currentIndex + 1) % photos.length;
     showPhoto(currentIndex);
 }
+// Automatically show the first photo when the page loads
+document.addEventListener("DOMContentLoaded", ()=>{
+    showPhoto(currentIndex);
+});
 
 </script>
-<script src="/liveAV.79bbb0f3.js"></script></body>
+        
+</div><script src="/liveAV.79bbb0f3.js"></script></body>
 </html>
