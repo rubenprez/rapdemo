@@ -2,22 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>RubenPerezIII</title>
+  <title>Ruben Perez III</title>
   <meta name="author" content="RubenPerezIII">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
   <link rel="stylesheet" href="/index.6dab377c.css">
   <link rel="stylesheet" href="/index.47ca9330.css">
-  <link rel="stylesheet" type="css/extra.css" href="/index.26871b4a.css">
+  <link rel="stylesheet" href="/index.26871b4a.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <style>body {
-  background-image: ();
   background-position: center;
   background-size: cover;
   flex-direction: column;
@@ -32,27 +27,11 @@ header {
   margin-top: 0;
 }
 
-nav ul {
-  text-align: center;
-  margin-top: 5px;
-  padding: 0;
-  list-style-type: none;
-}
-
-nav ul li {
-  margin-inline: 20px;
-  display: inline;
-}
-
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   color: #d981ff;
   font-family: Audiowide, sans-serif;
   font-size: 24px;
-}
-
-h1.text-effect {
-  font-size: 75px;
 }
 
 .title-button {
@@ -64,81 +43,24 @@ h1.text-effect {
   text-decoration: none;
 }
 
-.section-titles {
-  justify-content: center;
-  margin-bottom: 30px;
-  display: flex;
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.section-title {
-  margin: 50px 50px 0 20px;
-}
-
-footer {
-  text-align: center;
-  background-color: #fff;
-  width: 100%;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-}
-
 .videos-container {
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   margin-top: 36px;
-  margin-bottom: 0;
-  transition: margin-left 2s;
   display: flex;
-  overflow-x: hidden;
 }
 
 .video {
-  opacity: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  animation: 2s ease-in-out forwards fadeIn;
+  width: 100%;
+  max-width: 640px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-video {
-  width: 640px;
+.video iframe {
+  width: 100%;
   height: 360px;
-  transition: transform .5s ease-in-out;
-}
-
-@media screen and (width <= 768px) {
-  video {
-    width: 90%;
-    height: auto;
-  }
-}
-
-@keyframes particle-animation {
-  0% {
-    opacity: 1;
-    transform: translateY(0)rotate(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(100vh)rotate(720deg);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 .photo-caption {
@@ -148,6 +70,22 @@ video {
   margin-bottom: 20px;
   font-family: Audiowide, sans-serif;
   font-size: 24px;
+}
+
+.gallery {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.photo {
+  text-align: center;
+  display: none;
+}
+
+.photo.active {
+  display: block;
 }
 
 .prev, .next {
@@ -173,185 +111,56 @@ video {
 </head>
 <body>
   <header>
-    <!-- Clickable title button -->
     <div class="title-button" onclick="location.href='index.html';">Ruben Perez III</div>
-    <!-- Section titles -->
-    <!-- <div class="section-titles">
-      <h2 class="section-title"><a href="liveAV.html">Sound/Lighting</a></h2>
-      <h2 class="section-title"><a href="beats.html">Beats</a></h2>
-      <h2 class="section-title"><a href="electronics.html">Electronics</a></h2>
-    </div> -->
-  </header> 
-  
-  <!-- <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
-      <li><a href="About.html">About</a></li>
-    </ul>
-  </nav> -->
+  </header>
 
   <!-- Videos container -->
   <div class="videos-container" id="videos-container">
-    <!-- First video -->
-    <div class="video qclub-video" style="margin: 0">
-      <video controls="" class="qclub-video">
-        <source src="/qclub_3_clip.9b11bd03.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <!-- Video embeds -->
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/1019023840" frameborder="0" allow="autoplay; fullscreen" title="Q Nightclub - LD"></iframe>
       <p>Q Nightclub - LD</p>
-      <!-- Add text description here -->
     </div>
-    <!-- Second video -->
-    <div class="video jazz-alley-video" style="margin: 0">
-      <video controls="" class="jazz-alley-video">
-        <source src="/jazzalley_1_clip.50d7a7c6.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/1019020715" frameborder="0" allow="autoplay; fullscreen" title="Jazz Alley - FOH"></iframe>
       <p>Jazz Alley - FOH</p>
-      <!-- Add text description here -->
     </div>
-    <!-- Third video -->
-    <div class="video jazz-alley-video" style="margin: 0">
-      <video controls="" class="jazz-alley-video">
-        <source src="/qclub_iphone_clip_2.6529bf94.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Q Nightclub - LD</p>
-      <!-- Add text description here -->
-    </div>
-    <!-- Fourth video -->
-    <div class="video jazz-alley-video" style="margin: 0">
-      <video controls="" class="jazz-alley-video">
-        <source src="/jazzalley_iphone_clip_4.dc0b300a.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Jazz Alley - FOH</p>
-      <!-- Add text description here -->
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/1019023886" frameborder="0" allow="autoplay; fullscreen" title="Q Club too"></iframe>
+      <p>Q Club too</p>
     </div>
   </div>
 
-<!-- Gallery -->
-<div class="gallery">
-  <!-- Photos -->
-  <div class="photo active">
-    <img class="jazz-alley-image" src="/jazzalley_m7cl.ef6c8177.jpg" alt="Jazz Alley - FOH">
-    <p class="photo-caption">FOH M7CL Console</p>
-  </div>
-  <div class="photo">
-    <img class="jazz-alley-image" src="/jazzalley_stage.76de90e5.jpg" alt="Jazz Alley - Stage">
-    <p class="photo-caption">Jazz Alley Stage</p>
-  </div>
-  <div class="photo">
-    <img class="jazz-alley-image" src="/jazzalley_stageright.93c2a35f.jpg" alt="Jazz Alley - Stage Right">
-    <p class="photo-caption">Stage Right</p>
+  <!-- Gallery -->
+  <div class="gallery">
+    <div class="photo active">
+      <img src="/jazzalley_m7cl.ef6c8177.jpg" alt="Jazz Alley - FOH">
+      <p class="photo-caption">FOH M7CL Console</p>
+    </div>
+    <div class="photo">
+      <img src="/jazzalley_stage.76de90e5.jpg" alt="Jazz Alley - Stage">
+      <p class="photo-caption">Jazz Alley Stage</p>
+    </div>
+    <button class="prev" onclick="prevPhoto()">&#10094;</button>
+    <button class="next" onclick="nextPhoto()">&#10095;</button>
   </div>
 
-  <!-- Previous and Next buttons -->
-  <button class="prev" onclick="prevPhoto()">&#10094;</button>
-  <button class="next" onclick="nextPhoto()">&#10095;</button>
-</div>
-
-
-<style>.prev, .next {
-  color: #fff;
-  cursor: pointer;
-  z-index: 999;
-  background-color: #00000080;
-  border: none;
-  padding: 10px;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-</style>
-
-
-<script>// Get all images and buttons
-const photos = document.querySelectorAll(".photo");
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-const enlargedImagesContainer = document.getElementById("enlargedImages");
-// Initialize current index
+  <script>const photos = document.querySelectorAll(".photo");
 let currentIndex = 0;
-// Function to show the current photo and hide others
 function showPhoto(index) {
     photos.forEach((photo, idx)=>{
-        if (idx === index) photo.classList.add("active");
-        else photo.classList.remove("active");
+        photo.classList.toggle("active", idx === index);
     });
 }
-// Function to show previous photo
 function prevPhoto() {
     currentIndex = (currentIndex - 1 + photos.length) % photos.length;
     showPhoto(currentIndex);
 }
-// Function to show next photo
 function nextPhoto() {
     currentIndex = (currentIndex + 1) % photos.length;
     showPhoto(currentIndex);
 }
-// Add click event listeners to previous and next buttons
-prevButton.addEventListener("click", prevPhoto);
-nextButton.addEventListener("click", nextPhoto);
-// Add click event listener to each photo to enlarge
-photos.forEach((photo, index)=>{
-    photo.addEventListener("click", ()=>{
-        enlargedImagesContainer.innerHTML = "";
-        const img = photo.querySelector("img").cloneNode(true);
-        enlargedImagesContainer.appendChild(img);
-        enlargedImagesContainer.classList.add("enlarged");
-    });
-});
-// Add click event listener to close enlarged image
-enlargedImagesContainer.addEventListener("click", ()=>{
-    enlargedImagesContainer.classList.remove("enlarged");
-});
 
 </script>
-
-<style>.prev, .next {
-  color: #000;
-  cursor: pointer;
-  z-index: 9999;
-  background-color: #ffffff80;
-  border: none;
-  padding: 10px;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-body.enlarged {
-  overflow: hidden;
-}
-</style>
-
-<!-- <footer>
-  <nav>
-    <ul>
-    </ul>
-  </nav>
-</footer>  -->
-
-
 <script src="/liveAV.79bbb0f3.js"></script></body>
 </html>
