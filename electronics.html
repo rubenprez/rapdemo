@@ -3,26 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <title>RubenPerezIII</title>
+  <title>Ruben Perez III</title>
   <meta name="author" content="RubenPerezIII">
-  <meta name="keywords" content="">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
+  
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
+  
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/extra.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-
-  <title>Particle Effect</title>
+  
   <style>
     body {
       margin: 5px;
@@ -30,7 +23,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-image: ();
       background-size: cover;
       background-position: center;
     }
@@ -43,23 +35,14 @@
     nav ul {
       list-style-type: none;
       padding: 0;
-      margin-top: 5px;
       text-align: center;
     }
 
     nav ul li {
       display: inline;
-      margin-inline: 0px;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a {
+    h1, h2, h3, h4, h5, h6, p, a {
       text-align: center;
       color: rgb(217, 129, 255);
       font-family: "Audiowide", sans-serif;
@@ -73,16 +56,15 @@
     .videos-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       margin-top: 75px;
       width: 100%;
       overflow-x: hidden;
-      transition: margin-left 2s;
     }
 
     .video {
       margin-bottom: 50px;
+      text-align: center;
     }
 
     iframe {
@@ -96,14 +78,6 @@
         width: 90%;
         height: auto;
       }
-
-      .section-titles {
-        flex-wrap: wrap;
-      }
-
-      .section-title {
-        margin: 20px;
-      }
     }
 
     .title-button {
@@ -113,20 +87,6 @@
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
       margin-bottom: 50px;
-    }
-
-    .section-titles {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-      position: fixed;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .section-title {
-      margin: 50px 50px 0px 20px;
     }
   </style>
 </head>
@@ -140,35 +100,28 @@
   <div class="videos-container" id="videos-container">
     <!-- First Embedded Vimeo video -->
     <div class="video">
-      <div style="text-align: center;">
-        <iframe src="https://player.vimeo.com/video/1019026313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                title="BT-Speaker &amp; Audio-Spectrum-Analyzer"></iframe>
-      </div>
+      <iframe src="https://player.vimeo.com/video/1019026313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+        title="BT-Speaker &amp; Audio-Spectrum-Analyzer"></iframe>
       <p>BT Speaker + Audio Spectrum Analyzer</p>
     </div>
 
     <!-- Second Embedded Vimeo video -->
     <div class="video">
-      <div style="text-align: center;">
-        <iframe src="https://player.vimeo.com/video/1019031977?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                title="solder-plate-snowflake"></iframe>
-      </div>
+      <iframe src="https://player.vimeo.com/video/1019031977?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+        title="Solder Plate + LED"></iframe>
       <p>Solder Plate + LED</p>
     </div>
-
   </div>
 
-  <script src="https://player.vimeo.com/api/player.js"></script>
-
   <script>
-    window.onload = function() {
-      var videos = document.querySelectorAll('.video');
-      videos.forEach(function(video) {
-        video.style.opacity = '1'; // Ensure videos are visible
+    document.addEventListener('DOMContentLoaded', () => {
+      const videos = document.querySelectorAll('.video');
+      videos.forEach(video => {
+        video.style.opacity = '1';
       });
-    
+    });
   </script>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>

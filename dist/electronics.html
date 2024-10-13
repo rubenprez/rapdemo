@@ -3,124 +3,90 @@
 
 <head>
   <meta charset="utf-8">
-  <title>RubenPerezIII</title>
+  <title>Ruben Perez III</title>
   <meta name="author" content="RubenPerezIII">
-  <meta name="keywords" content="">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
+  
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="/index.6dab377c.css">
-  <link rel="stylesheet" href="/index.47ca9330.css">
-  <link rel="stylesheet" href="/index.26871b4a.css">
+  <link rel="apple-touch-icon" href="/icon.83aa3da3.png">
+  
+  <link rel="stylesheet" href="/normalize.1114379f.css">
+  <link rel="stylesheet" href="/main.c52e0fe2.css">
+  <link rel="stylesheet" href="/extra.3bfa745b.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-
-  <title>Particle Effect</title>
+  
   <style>body {
-  background-image: ();
-  background-position: center;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 0;
-  display: flex;
-}
+      margin: 5px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
 
-header {
-  text-align: center;
-  margin-top: 0;
-}
+    header {
+      text-align: center;
+      margin-top: 0;
+    }
 
-nav ul {
-  text-align: center;
-  margin-top: 5px;
-  padding: 0;
-  list-style-type: none;
-}
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
 
-nav ul li {
-  margin-inline: 0;
-  display: inline;
-}
+    nav ul li {
+      display: inline;
+    }
 
-h1, h2, h3, h4, h5, h6, p, a {
-  text-align: center;
-  color: #d981ff;
-  font-family: Audiowide, sans-serif;
-  font-size: 24px;
-}
+    h1, h2, h3, h4, h5, h6, p, a {
+      text-align: center;
+      color: rgb(217, 129, 255);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+    }
 
-h1.text-effect {
-  font-size: 75px;
-}
+    h1.text-effect {
+      font-size: 75px;
+    }
 
-.videos-container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 75px;
-  transition: margin-left 2s;
-  display: flex;
-  overflow-x: hidden;
-}
+    .videos-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 75px;
+      width: 100%;
+      overflow-x: hidden;
+    }
 
-.video {
-  margin-bottom: 50px;
-}
+    .video {
+      margin-bottom: 50px;
+      text-align: center;
+    }
 
-iframe {
-  width: 640px;
-  height: 360px;
-  transition: transform .5s ease-in-out;
-}
+    iframe {
+      width: 640px;
+      height: 360px;
+      transition: transform 0.5s ease-in-out;
+    }
 
-@media screen and (width <= 768px) {
-  iframe {
-    width: 90%;
-    height: auto;
-  }
+    @media screen and (max-width: 768px) {
+      iframe {
+        width: 90%;
+        height: auto;
+      }
+    }
 
-  .section-titles {
-    flex-wrap: wrap;
-  }
-
-  .section-title {
-    margin: 20px;
-  }
-}
-
-.title-button {
-  cursor: pointer;
-  color: #87f1ff;
-  margin-bottom: 50px;
-  font-family: Audiowide, sans-serif;
-  font-size: 110px;
-  text-decoration: none;
-}
-
-.section-titles {
-  justify-content: center;
-  margin-bottom: 30px;
-  display: flex;
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.section-title {
-  margin: 50px 50px 0 20px;
-}
-</style>
+    .title-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #87f1ff;
+      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      margin-bottom: 50px;
+    }</style>
 </head>
 
 <body>
@@ -132,36 +98,27 @@ iframe {
   <div class="videos-container" id="videos-container">
     <!-- First Embedded Vimeo video -->
     <div class="video">
-      <div style="text-align: center">
-        <iframe src="https://player.vimeo.com/video/1019026313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="BT-Speaker &amp; Audio-Spectrum-Analyzer"></iframe>
-      </div>
+      <iframe src="https://player.vimeo.com/video/1019026313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="BT-Speaker &amp; Audio-Spectrum-Analyzer"></iframe>
       <p>BT Speaker + Audio Spectrum Analyzer</p>
     </div>
 
     <!-- Second Embedded Vimeo video -->
     <div class="video">
-      <div style="text-align: center">
-        <iframe src="https://player.vimeo.com/video/1019031977?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="solder-plate-snowflake"></iframe>
-      </div>
+      <iframe src="https://player.vimeo.com/video/1019031977?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Solder Plate + LED"></iframe>
       <p>Solder Plate + LED</p>
     </div>
-
   </div>
 
-  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+  var videos = document.querySelectorAll('.video');
+  videos.forEach(function (video) {
+    video.style.opacity = '1';
+  });
+});</script>
 
-  <script>window.onload = function() {
-    var videos = document.querySelectorAll(".video");
-    videos.forEach(function(video) {
-        video.style.opacity = "1"; // Ensure videos are visible
-    });
-};
-
-</script>
-
-  <script src="/electronics.d40ef659.js"></script>
-  <script src="/electronics.1141a124.js"></script>
-  <script src="/electronics.72be8890.js"></script>
-<script src="/electronics.a9af8ec1.js"></script></body>
+  <script src="/modernizr-3.11.2.min.659b9f56.js"></script>
+  <script src="/plugins.7f97feee.js"></script>
+  <script src="/main.fb6bbcaf.js"></script>
+</body>
 
 </html>
