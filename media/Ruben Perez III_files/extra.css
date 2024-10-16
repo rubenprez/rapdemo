@@ -1,0 +1,26 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    background-color: rgb(255, 255, 255);
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: .2s;
+}
+
+li:hover{
+    background-color: rgb(255, 255, 255);
+}   
