@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="/main.c52e0fe2.css">
   <link rel="stylesheet" href="/extra.3bfa745b.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   
   <style>body {
       margin: 5px;
@@ -43,8 +45,8 @@
 
     h1, h2, h3, h4, h5, h6, p, a {
       text-align: center;
-      color: rgb(217, 129, 255);
-      font-family: "Audiowide", sans-serif;
+      color: #d981ff;
+      font-family: 'Roboto', sans-serif;
       font-size: 24px;
     }
 
@@ -100,21 +102,21 @@
     }
     
     .download-link {
-      font-size: 20px;
+      font-size: 22px;
       margin-top: 30px;
-      color: #0e94c5;
+      color: #d981ff;
       text-decoration: none;
-      font-family: "Audiowide", sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
 
     .description-box {
       margin-top: 20px;
-      border: 2px solid #0e94c5;
+      border: 0px solid #0e94c5;
       padding: 15px;
-      width: 50%;
-      font-size: 18px;
-      font-family: "Audiowide", sans-serif;
-      color: #0e94c5;
+      width: 65%;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      color: #ffffff;
     }
 
     table {
@@ -124,7 +126,7 @@
     }
 
     table, th, td {
-      border: 1px solid #0e94c5;
+      border: 2px solid #0e94c5;
       text-align: left;
       padding: 8px;
     }
@@ -147,51 +149,52 @@
       Download Bluetooth Project Executable
     </a> -->
 
-    <!-- Description box -->
-    <div class="description-box">
-      <h3>Bluetooth Device Scanner</h3>
-      <p> </p>
-      <table>
-        <tr>
-          <th>File</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/user-attachments/files/17532697/Bluetooth_Scan.zip" class="download-link" download="bluetooth_proj_1_executable">bluetooth_scan.exe</a></td>
-          <td>This script is a Bluetooth device scanner that uses Python's Bleak library to scan for nearby Bluetooth devices and extract detailed information about them. It detects and categorizes the devices as either BLE (Bluetooth Low Energy) or Classic Bluetooth by checking the advertised services' UUIDs against a predefined dictionary of common Bluetooth profiles. The script displays information like the device name, MAC address, signal strength (RSSI), connection status, and other relevant details.</td>
-        </tr>
-      </table>
-    </div>
+<!-- Description box -->
+<div class="description-box">
+  <h3>Bluetooth Device Scanner</h3>
+  <table>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/user-attachments/files/17532697/Bluetooth_Scan.zip" class="download-link" download="bluetooth_proj_1_executable">bluetooth_scan.exe</a></td>
+      <td>Utilizing Python's "Bleak" library to scan for nearby Bluetooth devices and extract detailed information, the Python script identifies between BLE (Bluetooth Low Energy) and Classic Bluetooth platform types by analyzing service UUIDs. For each discovered device, it collects critical details such as the device name, MAC address, RSSI (signal strength), and connection status.<br><br>
+      
+Additionally, the script provides extensive debugging information for developers, such as transmission power, connection interval, security level, and advertised services. This data helps in profiling device connectivity, optimizing performance, and debugging issues during Bluetooth integration or testing.</td>
+    </tr>
+  </table>
+</div>
 
-    <div class="description-box">
-      <h3>Video Format Metadata Sweep</h3>
-      <p> </p>
-      <table>
-        <tr>
-          <th>File</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/user-attachments/files/17532680/Video.Data.Scan.zip" class="download-link" download="video scan">video-data_scan.exe</a></td>
-          <td>This Python script uses pymediainfo to extract detailed metadata from video files and scan a folder for media content. The script gathers information about the video and audio tracks, computes file checksums, and formats the output for easy readability. It also allows users to process multiple files in a folder and save metadata to a text file. </td>
-        </tr>
-      </table>
-    </div>
+<div class="description-box">
+  <h3>Video Format Metadata Sweep</h3>
+  <table>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/user-attachments/files/17532680/Video.Data.Scan.zip" class="download-link" download="video scan">video-data_scan.exe</a></td>
+      <td>This Python script uses "pymediainfo" to extract detailed metadata from video files/media content.<br><br>
+      The Video Scanner script extracts detailed metadata from video files, including video and audio formats, resolution, bit rate, and file size, while also verifying file integrity with a SHA-256 checksum. It saves the results in a text file and checks device compatibility based on video resolution. It also allows users to process multiple files at once, saving metadata to .txt files.<br><br>
+    </td></tr>
+  </table>
+</div>
 
   
 
   <!-- Videos container -->
   <div class="videos-container" id="videos-container">
     <!-- First Embedded Vimeo video -->
+    <p>Bluetooth Speaker + Audio Spectrum Analyzer</p>    
     <div class="video">
       <iframe src="https://player.vimeo.com/video/1019026313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="BT-Speaker &amp; Audio-Spectrum-Analyzer"></iframe>
-      <p>BT Speaker + Audio Spectrum Analyzer</p>
     </div>
 
     <!-- Second Embedded Vimeo video -->
+    <p>Solder Plate + LED</p>
     <div class="video">
       <iframe src="https://player.vimeo.com/video/1019031977?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Solder Plate + LED"></iframe>
-      <p>Solder Plate + LED</p>
     </div>
   </div>
 
