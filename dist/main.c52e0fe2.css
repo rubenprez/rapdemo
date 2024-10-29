@@ -243,5 +243,16 @@
 
 }
 
+#bt-speaker-title {
+    padding-top: 20px;   /* Adjusts padding above the title */
+    padding-bottom: 10px; /* Adjusts padding below the title */
+}
+  
+
+#solder-plate-title {
+    padding-top: 20px;    /* Adjusts padding above the title */
+    padding-bottom: 10px; /* Adjusts padding below the title */
+}
+    
 
 /*# sourceMappingURL=/main.c52e0fe2.css.map */
