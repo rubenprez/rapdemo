@@ -105,11 +105,20 @@
     .download-link {
       font-size: 22px;
       margin-top: 30px;
-      color: #d981ff;
+      color: #0e94c5;
       text-decoration: none;
       font-family: 'Roboto', sans-serif;
+      transition: all 0.3s ease; /* Smooth transition for effects */
     }
 
+    .download-link:hover {
+      color: #ffffff; /* Changes text color on hover */
+      background-color: #0e94c5; /* Adds a background color */
+      padding: 3px 0px; /* Adds padding around the text */
+      border-radius: 5px; /* Rounds the corners */
+      transform: scale(1.1); /* Slightly increases the size */
+      box-shadow: 10px 5px 100px #d981ff; /* Adds a shadow effect */
+    }
     .description-box {
       margin-top: 20px;
       border: 0px solid #0e94c5;
@@ -129,7 +138,7 @@
     table, th, td {
       border: 2px solid #0e94c5;
       text-align: left;
-      padding: 8px;
+      padding: 6px;
     }
 
     th {
@@ -152,37 +161,86 @@
       Download Bluetooth Project Executable
     </a> -->
 
+
 <!-- Description box -->
 <div class="description-box">
-  <h3>Bluetooth Device Scanner</h3>
+  <h3></h3>
   <table>
-    <tr>
-      <th>File</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/user-attachments/files/17549259/Bluetooth_Scan.zip" class="download-link" download="bluetooth_proj_1_executable">MacOS Unix Bluetooth_scan.exe</a></td>
-      <td>Utilizing Python's "Bleak" library to scan for nearby Bluetooth devices and extract detailed information, the Python script identifies between BLE (Bluetooth Low Energy) and Classic Bluetooth platform types by analyzing service UUIDs. For each discovered device, it collects critical details such as the device name, MAC address, RSSI (signal strength), and connection status.<br><br>
-      
-Additionally, the script provides extensive debugging information for developers, such as transmission power, connection interval, security level, and advertised services. This data helps in profiling device connectivity, optimizing performance, and debugging issues during Bluetooth integration or testing.</td>
-    </tr>
   </table>
-</div>
 
-<div class="description-box">
-  <h3>Video Format Metadata Sweep</h3>
-  <table>
-    <tr>
-      <th>File</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/user-attachments/files/17549272/Video.Data.Scan.zip" class="download-link" download="video scan">MacOS Unix VideoData_scan.exe</a></td>
-      <td>This Python script uses "pymediainfo" to extract detailed metadata from video files/media content.<br><br>
-      The Video Scanner script extracts detailed metadata from video files, including video and audio formats, resolution, bit rate, and file size, while also verifying file integrity with a SHA-256 checksum. It saves the results in a text file and checks device compatibility based on video resolution. It also allows users to process multiple files at once, saving metadata to .txt files.<br><br>
-    </tr>
-  </table>
-</div>
+  <!-- Container to hold both video and description side by side -->
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
+    <!-- Embedded Video for Bluetooth Device Scanner -->
+    <div style="position:relative;">
+      <iframe src="https://player.vimeo.com/video/1028249591?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+        frameborder="0" allow="autoplay" 
+        style="width:320px; height:240px;" 
+        title="bluetooth-scan_preview">
+      </iframe>
+    </div>
+    <!-- Text next to the Vimeo player -->
+    <div>
+      <table>
+        <tr>
+            <a href="https://github.com/user-attachments/files/17549259/Bluetooth_Scan.zip" class="download-link" download="bluetooth_proj_1_executable"><br><br>
+            MacOS Unix Bluetooth_scan.exe
+            </a>
+        </tr>
+      </table>
+      <td>Utilizing Python's "Bleak" library to scan for nearby Bluetooth devices and extract detailed information, the Python script identifies between BLE (Bluetooth Low Energy) and Classic Bluetooth platform types by analyzing service UUIDs. For each discovered device, it collects critical details such as the device name, MAC address, RSSI (signal strength), and connection status.</p>
+      </td>Additionally, the script provides extensive debugging information for developers, such as transmission power, connection interval, security level, and advertised services. This data helps in profiling device connectivity, optimizing performance, and debugging issues during Bluetooth integration or testing.</p>
+    </div>
+  </div>
+
+  <!-- Container to hold both video and description side by side -->
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
+    <!-- Embedded Video for Video format Scanner -->
+    <div style="position:relative;">
+      <iframe src="https://player.vimeo.com/video/1028260722?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+        frameborder="0" allow="autoplay" 
+        style="width:320px; height:240px;" 
+        title="video-scan_preview">
+      </iframe>
+    </div>
+    <!-- Text next to the Vimeo player -->
+    <div>
+      <table>
+        <tr>
+          <a href="https://github.com/user-attachments/files/17549272/Video.Data.Scan.zip" class="download-link" download="video_proj_1_executable"><br><br>
+              MacOS Unix Video Format_scan.exe
+            </a>
+        </tr>
+      </table>
+      <td>This Python script uses "pymediainfo" to extract detailed metadata from video files/media content.</p>
+      </td>The Video Scanner script extracts detailed metadata from video files, including video and audio formats, resolution, bit rate, and file size, while also verifying file integrity with a SHA-256 checksum. It saves the results in a text file and checks device compatibility based on video resolution. It also allows users to process multiple files at once, saving metadata to .txt files.</p>
+    </div>
+  </div>
+  
+<!-- Container to hold both video and description side by side -->
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <!-- Embedded Video for Bluetooth Device Scanner -->
+  <div style="position:relative;">
+    <iframe src="https://player.vimeo.com/video/1028274211?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+      frameborder="0" allow="autoplay" 
+      style="width:320px; height:240px;" 
+      title="bluetooth-scan_preview">
+    </iframe>
+  </div>
+  <!-- Text next to the Vimeo player -->
+  <div>
+    <table>
+      <br><br>
+      <tr>
+        <a href="https://github.com/rubenprez/rapdemo/releases/download/spatial/spatial-audio_mac.zip" class="download-link" download="spatial-audio_macos.zip">Spatial-Audio_macos.zip</a>  <->
+        <a href="https://github.com/rubenprez/rapdemo/releases/download/spatial/spatial-audio_pc.zip" class="download-link" download="spatial-audio_pc.zip">Spatial-Audio_windows.zip</a>
+        </a>
+      </tr>
+    </table>
+    <td>This Unity-based application for macOS and Windows PC lets users immerse themselves in spatial audio. Featuring Head-Related Transfer Function (HRTF) for realistic 3D sound, it adjusts audio based on head orientation, making sound sources feel truly directional.</p>
+    </td>The demo also incorporates audio occlusion, where objects between the listener and sound sources realistically affect sound perception. <br>Additionally, it provides distance attenuation, so audio intensity adjusts naturally as users approach or move away from sources. Ideal for experiencing advanced spatial audio in gaming, VR, or simulation environments.</div></br></p>
+  </div>
+</div>  
+
 
   </div>
 
