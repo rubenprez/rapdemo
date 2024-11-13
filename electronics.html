@@ -10,14 +10,12 @@
   
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/extra.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  
   <style>
     body {
       margin: 5px;
@@ -27,6 +25,7 @@
       align-items: center;
       background-size: cover;
       background-position: center;
+      color: #ffffff;
     }
 
     header {
@@ -34,21 +33,11 @@
       margin-top: 0;
     }
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline;
-    }
-
     h1, h2, h3, h4, h5, h6, p, a {
-      text-align: center;
       color: #d981ff;
       font-family: 'Roboto', sans-serif;
       font-size: 24px;
+      text-align: center;
     }
 
     h1.text-effect {
@@ -99,7 +88,7 @@
     .images-container img {
       width: 80%;
       max-width: 800px;
-      margin: 15px 0;
+      margin: 5px 0;
     }
     
     .download-link {
@@ -108,25 +97,28 @@
       color: #0e94c5;
       text-decoration: none;
       font-family: 'Roboto', sans-serif;
-      transition: all 0.3s ease; /* Smooth transition for effects */
+      transition: all 0.3s ease;
     }
 
     .download-link:hover {
-      color: #ffffff; /* Changes text color on hover */
-      background-color: #0e94c5; /* Adds a background color */
-      padding: 3px 0px; /* Adds padding around the text */
-      border-radius: 5px; /* Rounds the corners */
-      transform: scale(1.1); /* Slightly increases the size */
-      box-shadow: 10px 5px 100px #d981ff; /* Adds a shadow effect */
+      color: #ffffff;
+      background-color: #0e94c5;
+      padding: 3px 5px;
+      border-radius: 5px;
+      transform: scale(1.1);
+      box-shadow: 10px 5px 50px #0e94c5;
     }
+    
     .description-box {
       margin-top: 20px;
-      border: 0px solid #0e94c5;
       padding: 15px;
       width: 65%;
       font-size: 20px;
       font-family: 'Roboto', sans-serif;
       color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      line-height: 1.5;
     }
 
     table {
@@ -145,7 +137,6 @@
       background-color: #0e94c5;
       color: white;
     }
-
   </style>
 </head>
 
@@ -155,96 +146,59 @@
     <div class="title-button" onclick="location.href='index.html';">Ruben Perez III</div>
   </header>
 
-  <!-- Download link
-  <div class="download-link-container">
-    <a href="https://github.com/user-attachments/files/17515259/bluetooth.scan.zip" class="download-link" download="bluetooth_proj_1_executable">
-      Download Bluetooth Project Executable
-    </a> -->
-
-
-<!-- Description box -->
-<div class="description-box">
-  <h3></h3>
-  <table>
-  </table>
-
-  <!-- Container to hold both video and description side by side -->
-  <div style="display: flex; align-items: flex-start; gap: 20px;">
-    <!-- Embedded Video for Bluetooth Device Scanner -->
-    <div style="position:relative;">
-      <iframe src="https://player.vimeo.com/video/1028249591?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
-        frameborder="0" allow="autoplay" 
-        style="width:320px; height:240px;" 
-        title="bluetooth-scan_preview">
-      </iframe>
-    </div>
-    <!-- Text next to the Vimeo player -->
-    <div>
-      <table>
-        <tr>
-            <a href="https://github.com/user-attachments/files/17549259/Bluetooth_Scan.zip" class="download-link" download="bluetooth_proj_1_executable"><br><br>
-            MacOS Unix Bluetooth_scan.exe
-            </a>
-        </tr>
-      </table>
-      <td>Utilizing Python's "Bleak" library to scan for nearby Bluetooth devices and extract detailed information, the Python script identifies between BLE (Bluetooth Low Energy) and Classic Bluetooth platform types by analyzing service UUIDs. For each discovered device, it collects critical details such as the device name, MAC address, RSSI (signal strength), and connection status.</p>
-      </td>Additionally, the script provides extensive debugging information for developers, such as transmission power, connection interval, security level, and advertised services. This data helps in profiling device connectivity, optimizing performance, and debugging issues during Bluetooth integration or testing.</p>
-    </div>
-  </div>
-
-  <!-- Container to hold both video and description side by side -->
-  <div style="display: flex; align-items: flex-start; gap: 20px;">
-    <!-- Embedded Video for Video format Scanner -->
-    <div style="position:relative;">
-      <iframe src="https://player.vimeo.com/video/1028260722?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
-        frameborder="0" allow="autoplay" 
-        style="width:320px; height:240px;" 
-        title="video-scan_preview">
-      </iframe>
-    </div>
-    <!-- Text next to the Vimeo player -->
-    <div>
-      <table>
-        <tr>
-          <a href="https://github.com/user-attachments/files/17549272/Video.Data.Scan.zip" class="download-link" download="video_proj_1_executable"><br><br>
-              MacOS Unix Video Format_scan.exe
-            </a>
-        </tr>
-      </table>
-      <td>This Python script uses "pymediainfo" to extract detailed metadata from video files/media content.</p>
-      </td>The Video Scanner script extracts detailed metadata from video files, including video and audio formats, resolution, bit rate, and file size, while also verifying file integrity with a SHA-256 checksum. It saves the results in a text file and checks device compatibility based on video resolution. It also allows users to process multiple files at once, saving metadata to .txt files.</p>
-    </div>
-  </div>
-  
-<!-- Container to hold both video and description side by side -->
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-  <!-- Embedded Video for Bluetooth Device Scanner -->
-  <div style="position:relative;">
-    <iframe src="https://player.vimeo.com/video/1028274211?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
-      frameborder="0" allow="autoplay" 
-      style="width:320px; height:240px;" 
-      title="bluetooth-scan_preview">
-    </iframe>
-  </div>
-  <!-- Text next to the Vimeo player -->
-  <div>
-    <table>
-      <br><br>
-      <tr>
-        <a href="https://github.com/rubenprez/rapdemo/releases/download/spatial/spatial-audio_mac.zip" class="download-link" download="spatial-audio_macos.zip">Spatial-Audio_macos.zip</a>  <->
-        <a href="https://github.com/rubenprez/rapdemo/releases/download/spatial/spatial-audio_pc.zip" class="download-link" download="spatial-audio_pc.zip">Spatial-Audio_windows.zip</a>
+  <div class="description-box">
+    <!-- Container for Bluetooth Scanner -->
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <div style="position:relative;">
+        <iframe src="https://player.vimeo.com/video/1028249591?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+          frameborder="0" allow="autoplay"
+          style="width:320px; height:240px;"
+          title="bluetooth-scan_preview">
+        </iframe>
+      </div>
+      <div>
+        <a href="https://github.com/user-attachments/files/17549259/Bluetooth_Scan.zip" class="download-link" download="bluetooth_proj_1_executable">
+          MacOS Unix Bluetooth_scan.exe
         </a>
-      </tr>
-    </table>
-    <td>This Unity-based application for macOS and Windows PC lets users immerse themselves in spatial audio. Featuring Head-Related Transfer Function (HRTF) for realistic 3D sound, it adjusts audio based on head orientation, making sound sources feel truly directional.</p>
-    </td>The demo also incorporates audio occlusion, where objects between the listener and sound sources realistically affect sound perception. <br>Additionally, it provides distance attenuation, so audio intensity adjusts naturally as users approach or move away from sources. Ideal for experiencing advanced spatial audio in gaming, VR, or simulation environments.</div></br></p>
+        <p></p>Utilizing Python's "Bleak" library to scan for nearby Bluetooth devices and extract detailed information, the Python script identifies between BLE (Bluetooth Low Energy) and Classic Bluetooth platform types by analyzing service UUIDs. It collects critical details such as device name, MAC address, RSSI, and connection status. Additional data like transmission power and connection interval aids in debugging and optimizing performance.
+      </div>
+    </div>
+
+    <!-- Container for Video Format Scanner -->
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <div style="position:relative;">
+        <iframe src="https://player.vimeo.com/video/1028260722?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+          frameborder="0" allow="autoplay"
+          style="width:320px; height:240px;"
+          title="video-scan_preview">
+        </iframe>
+      </div>
+      <div>
+        <a href="https://github.com/user-attachments/files/17549272/Video.Data.Scan.zip" class="download-link" download="video_proj_1_executable">
+          MacOS Unix Video Format_scan.exe
+        </a>
+        <p></p>This Python script uses "pymediainfo" to extract metadata from video files, including video and audio formats, resolution, bit rate, and file size. It verifies file integrity with a SHA-256 checksum and allows users to process multiple files at once, saving metadata to .txt files for compatibility checks.
+      </div>
+    </div>
+
+    <!-- Container for Spatial Audio Demo -->
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <div style="position:relative;">
+        <iframe src="https://player.vimeo.com/video/1028274211?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+          frameborder="0" allow="autoplay"
+          style="width:320px; height:240px;"
+          title="spatial-audio_preview">
+        </iframe>
+      </div>
+      <div>
+        <a href="https://github.com/rubenprez/rapdemo/releases/download/spatial/spatial-audio_mac.zip" class="download-link" download="spatial-audio_macos.zip">Spatial-Audio_macos.zip</a> | 
+        <a href="https://github.com/rubenprez/rapdemo/releases/download/spatial/spatial-audio_pc.zip" class="download-link" download="spatial-audio_pc.zip">Spatial-Audio_windows.zip</a>
+        <p></p>This Unity-based application lets users immerse in spatial audio with features like HRTF for realistic 3D sound, audio occlusion for object-based sound perception, and distance attenuation for natural audio intensity scaling, ideal for gaming, VR, or simulation environments.
+      </div>
+    </div>
   </div>
-</div>  
 
-
-  </div>
-
-  <!-- Videos container -->
+  <!-- Videos container with additional preview videos -->
   <div class="videos-container" id="videos-container">
     <!-- First Embedded Vimeo video -->
     <p>Bluetooth Speaker + Audio Spectrum Analyzer</p>    
@@ -263,20 +217,22 @@
     </div>
   </div>
 
+  <!-- Additional Embedded Vimeo videos at the bottom 
+  <div class="videos-container">
+    <!-Third Vimeo Video -> 
+    <p>Additional Project Demo 1</p>
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/ADD_VIDEO_ID_HERE" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+        title="Additional Demo Video 1"></iframe>
+    </div> -->
 
+    <!-- Fourth Vimeo Video 
+    <p>Additional Project Demo 2</p>
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/ADD_VIDEO_ID_HERE" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+        title="Additional Demo Video 2"></iframe>
+    </div>
+  </div> -->
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const videos = document.querySelectorAll('.video');
-      videos.forEach(video => {
-        video.style.opacity = '1';
-      });
-    });
-  </script>
-
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
 </body>
-
 </html>
