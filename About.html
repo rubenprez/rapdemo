@@ -2,127 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>RubenPerezIII</title>
-  <meta name="author" content="RubenPerezIII">
-  <meta name="keywords" content="">
+  <title>Ruben Perez III</title>
+  <meta name="author" content="Ruben Perez III">
+  <meta name="keywords" content="Multimedia, Quality Assurance, Audio Visual, Testing">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
+  <meta property="og:title" content="Ruben Perez III">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Particle Effect</title>
   <style>
     /* General Styles */
     body {
-      margin: 5px;
+      margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-image: ();
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(270deg, #1a003d, #000000);
+      background-size: 300% 350%;
+      animation: gradientShift 25s ease infinite;
+      color: white;
+      font-family: "Audiowide", sans-serif;
     }
-    
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header Section */
     header {
       text-align: center;
       margin-top: 0px;
     }
-    
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-    
-    nav ul li {
-      display: inline;
-      margin-inline: 40px;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a {
-      text-align: center;
-      color: rgb(217, 129, 255);
-      font-family: "Audiowide", sans-serif;
-      font-size: 24px;
-    }
-    
-    h1.text-effect {
-      font-size: 75px;
-    }
-    
+
     /* Style for the clickable button */
     .title-button {
       cursor: pointer;
       text-decoration: none;
-      color: #0e94c5; /* Change text color if necessary */
-      font-family: "Audiowide", sans-serif;
+      color: #0e94c5; /* Change text color if necessary */      font-family: "Audiowide", sans-serif;
       font-size: 110px;
-      margin-bottom: 50px; /* Adjust as needed */
+      margin-bottom: 0px; /* Adjust as needed */
     }
-    /* Style for section titles */
-    .section-titles {
+
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      padding: 3px 5px;
+      font-size: 22px;
+      color: #ffffff;
+      background: #0e94c5;
+      border-radius: 5px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      background: #000000;
+      transform: scale(1.1);
+    }
+
+    /* Iframe Section */
+    section.iframe-container {
       display: flex;
       justify-content: center;
-      margin-bottom: 30px;
-      position: fixed;
-      top: 10px;
-      /* Adjust as needed */
-      left: 50%;
-      transform: translateX(-50%);
+      align-items: center;
+      margin: 30px 10px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      max-width: 80%;
     }
 
-    .section-title {
-      margin: 0px;
+    iframe {
+      border: 0;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 720px;
+      height: 457px;
     }
-    
+
+    /* Text Section */
     .text-section {
-      border: 2px solid rgb(217, 129, 255);
-      padding: 10px;
-      max-width: 800px; /* Adjust as needed */
+      border: 2px solid #0e94c5;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      line-height: 1.8;
+      font-family: sans-serif;
+      font-size: 18px;
     }
 
-    .text-section p {
-      text-align: justify;
-      line-height: 1.6;
-      color: rgb(255, 255, 255); /* Setting the color for the text section description */
-      font-family: sans-serif; /* Setting the font family for the text section description */
-    }
     .text-section a {
-      color: rgb(255, 255, 255); /* Setting the color for the links */
-      font-family: "Audiowide", sans-serif; /* Setting the font family for the links */
-      text-decoration: none; /* Removing underline from the links */
+      color: white; /* Links inside text-section are white */
+      text-decoration: none;
     }
+
     .text-section a:hover {
-      text-decoration: underline; /* Adding underline on hover for the links */
+      text-decoration: underline;
     }
-
-body {
-  background: linear-gradient(270deg, #1a003d, #000000);
-  background-size: 300% 350%;
-  animation: gradientShift 25s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
 
   </style>
@@ -131,21 +123,34 @@ body {
   <header>
     <!-- Clickable title button -->
     <div class="title-button" onclick="location.href='index.html';">Ruben Perez III</div>
-    <!-- LinkedIn and Instagram links -->
+    <!-- LinkedIn link -->
     <nav>
       <ul>
-        <!-- <li><a href="index.html">Home</a></li> -->
         <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
-        <!-- <li><a href="https://www.instagram.com/rubenprezz/.html">Instagram</a></li> -->
       </ul>
     </nav>
-  </header> 
-  <!-- Text section -->
+  </header>
+
+  <!-- Embedded iframe without "Open in Keynote" button -->
+  <section style="display: flex; justify-content: center; align-items: center; margin: 20px;">
+    <div style="border: 2px solid #0e94c5; padding: 1px; border-radius: 10px; background-color: #1a1a1a; max-width: 100%; width: 720px;">
+      <iframe 
+        src="https://www.icloud.com/keynote/0641T2lBdg8JNqGOHdNh9d74A?embed=true&hideControls=true" 
+        width="100%"   
+        height="457" 
+        allowfullscreen="1" 
+        referrer="no-referrer" 
+        style="border: 0; display: block; margin: 0 auto;">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Text Section -->
   <section class="text-section">
-    <p>With over 10 years of hands-on experience in both Audio Visual production and Quality Assurance testing, Ruben Perez III combines technical proficiency with creative insight to deliver top-tier results across a range of multimedia projects. </p>
-    <p>As an Audio Visual expert, Ruben has excelled in roles such as Front of House Engineer, Stage Monitor Engineer, and Lighting Designer, mastering live sound and studio production. His current multimedia projects include recording dialogue and sound design for an expansive 300+ page audiobook, as well as producing lo-fi, hip-hop beats in his studio. Ruben’s workflow is powered by cutting-edge equipment like the Universal Audio Apollo Twin MKII interface, SSL-Six Audio Mixer, and Ableton Live 12 suite on MacOS.</p>
-    <p>In his parallel career in Quality Assurance, Ruben is skilled in testing multimedia software and hardware performance across Windows PC, macOS, iOS, and Android platforms. Proficient in project management tools like Jira and TestRail, with significant experience in debugging and optimizing audio applications, including Meta XR Audio Universal HRTF (head-related transfer function) plugins for augmented reality Android applications. </p>
-    <p>Driven by a strong passion for technology, creativity, and innovation, Ruben combines his extensive knowledge of A/V production with his expertise in QA testing, making him a vital contributor to any multimedia project.   </p>
+    <p>With over 10 years of hands-on experience in both Audio Visual production and Quality Assurance testing, Ruben Perez III combines technical proficiency with creative insight to deliver top-tier results across a range of multimedia projects.</p>
+    <p>As an Audio Visual expert, Ruben has excelled in roles such as Front of House Engineer, Stage Monitor Engineer, and Lighting Designer, mastering live sound and studio production. His current multimedia projects include recording dialogue and sound design for an expansive 300+ page audiobook, as well as producing lo-fi, hip-hop beats in his studio. Ruben’s workflow is powered by cutting-edge equipment like the Universal Audio Apollo Twin MKII interface, SSL-Six Audio Mixer, and Ableton Live 12 suite on macOS.</p>
+    <p>In his parallel career in Quality Assurance, Ruben is skilled in testing multimedia software and hardware performance across Windows PC, macOS, iOS, and Android platforms. Proficient in project management tools like Jira and TestRail, with significant experience in debugging and optimizing audio applications, including Meta XR Audio Universal HRTF (head-related transfer function) plugins for augmented reality Android applications.</p>
+    <p>Driven by a strong passion for technology, creativity, and innovation, Ruben combines his extensive knowledge of A/V production with his expertise in QA testing, making him a vital contributor to any multimedia project.</p>
   </section>
 </body>
 </html>
