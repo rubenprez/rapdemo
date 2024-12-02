@@ -9,135 +9,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="apple-touch-icon" href="/icon.83aa3da3.png">
-  <link rel="stylesheet" href="/normalize.1114379f.css">
-  <link rel="stylesheet" href="/main.c52e0fe2.css">
-  <link rel="stylesheet" href="/extra.3bfa745b.css">
+  <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
+  <link rel="stylesheet" href="/index.6dab377c.css">
+  <link rel="stylesheet" href="/index.47ca9330.css">
+  <link rel="stylesheet" href="/index.26871b4a.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>body {
-      margin: 5px;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
-    }
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 0;
+  display: flex;
+}
 
-    header {
-      text-align: center;
-      margin-top: 0;
-    }
+header {
+  text-align: center;
+  margin-top: 0;
+}
 
-    h1, h2, h3, h4, h5, h6, p, a {
-      color: #c50e5a;
-      color: #d981ff;
-      font-family: 'Roboto', sans-serif;
-      font-size: 24px;
-      text-align: center;
-    }
+h1, h2, h3, h4, h5, h6, p, a {
+  color: #d981ff;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+}
 
-    h1.text-effect {
-      font-size: 75px;
-    }
+h1.text-effect {
+  font-size: 75px;
+}
 
-    .videos-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 75px;
-      width: 100%;
-      overflow-x: hidden;
-    }
+.videos-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 75px;
+  display: flex;
+  overflow-x: hidden;
+}
 
-    .video {
-      margin-bottom: 50px;
-      text-align: center;
-    }
+.video {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-    iframe {
-      width: 640px;
-      height: 360px;
-      transition: transform 0.5s ease-in-out;
-    }
+iframe {
+  width: 640px;
+  height: 360px;
+  transition: transform .5s ease-in-out;
+}
 
-    @media screen and (max-width: 768px) {
-      iframe {
-        width: 90%;
-        height: auto;
-      }
-    }
+@media screen and (width <= 768px) {
+  iframe {
+    width: 90%;
+    height: auto;
+  }
+}
 
-    .title-button {
-      cursor: pointer;
-      text-decoration: none;
-      color: #0e94c5;
-      font-family: "Audiowide", sans-serif;
-      font-size: 110px;
-      margin-bottom: 50px;
-    }
+.title-button {
+  cursor: pointer;
+  color: #0e94c5;
+  margin-bottom: 50px;
+  font-family: Audiowide, sans-serif;
+  font-size: 110px;
+  text-decoration: none;
+}
 
-    .images-container {
-      margin-top: 50px;
-      text-align: center;
-    }
+.images-container {
+  text-align: center;
+  margin-top: 50px;
+}
 
-    .images-container img {
-      width: 80%;
-      max-width: 800px;
-      margin: 5px 0;
-    }
-    
-    .download-link {
-      font-size: 22px;
-      margin-top: 30px;
-      color: #c50e5a;
-      color: #0e94c5;
-      text-decoration: none;
-      font-family: 'Roboto', sans-serif;
-      transition: all 0.3s ease;
-    }
+.images-container img {
+  width: 80%;
+  max-width: 800px;
+  margin: 5px 0;
+}
 
-    .download-link:hover {
-      color: #ffffff;
-      background-color: #0e94c5;
-      padding: 3px 5px;
-      border-radius: 5px;
-      transform: scale(1.1);
-      box-shadow: 10px 5px 50px #0e94c5;
-    }
-    
-    .description-box {
-      margin-top: 20px;
-      padding: 15px;
-      width: 65%;
-      font-size: 20px;
-      font-family: 'Roboto', sans-serif;
-      color: #ffffff;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
-      line-height: 1.5;
-    }
+.download-link {
+  color: #0e94c5;
+  margin-top: 30px;
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+  transition: all .3s;
+}
 
-    table {
-      margin-top: 10px;
-      width: 100%;
-      border-collapse: collapse;
-    }
+.download-link:hover {
+  color: #fff;
+  background-color: #0e94c5;
+  border-radius: 5px;
+  padding: 3px 5px;
+  transform: scale(1.1);
+  box-shadow: 10px 5px 50px #0e94c5;
+}
 
-    table, th, td {
-      border: 2px solid #0e94c5;
-      text-align: left;
-      padding: 6px;
-    }
+.description-box {
+  color: #fff;
+  background-color: #000000b3;
+  border-radius: 10px;
+  width: 65%;
+  margin-top: 20px;
+  padding: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
 
-    th {
-      background-color: #0e94c5;
-      color: white;
-    }</style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+table, th, td {
+  text-align: left;
+  border: 2px solid #0e94c5;
+  padding: 6px;
+}
+
+th {
+  color: #fff;
+  background-color: #0e94c5;
+}
+</style>
 </head>
 
 <body>
@@ -148,9 +147,9 @@
 
   <div class="description-box">
     <!-- Container for Bluetooth Scanner -->
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <div style="position:relative;">
-        <iframe src="https://player.vimeo.com/video/1028249591?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" frameborder="0" allow="autoplay" style="width:320px; height:240px;" title="bluetooth-scan_preview">
+    <div style="align-items: flex-start; gap: 20px; display: flex">
+      <div style="position: relative">
+        <iframe src="https://player.vimeo.com/video/1028249591?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" frameborder="0" allow="autoplay" style="width: 320px; height: 240px" title="bluetooth-scan_preview">
         </iframe>
       </div>
       <div>
@@ -162,9 +161,9 @@
     </div>
 
     <!-- Container for Video Format Scanner -->
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <div style="position:relative;">
-        <iframe src="https://player.vimeo.com/video/1028260722?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" frameborder="0" allow="autoplay" style="width:320px; height:240px;" title="video-scan_preview">
+    <div style="align-items: flex-start; gap: 20px; display: flex">
+      <div style="position: relative">
+        <iframe src="https://player.vimeo.com/video/1028260722?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" frameborder="0" allow="autoplay" style="width: 320px; height: 240px" title="video-scan_preview">
         </iframe>
       </div>
       <div>
@@ -176,9 +175,9 @@
     </div>
 
     <!-- Container for Spatial Audio Demo -->
-    <div style="display: flex; align-items: flex-start; gap: 20px;">
-      <div style="position:relative;">
-        <iframe src="https://player.vimeo.com/video/1028274211?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" frameborder="0" allow="autoplay" style="width:320px; height:240px;" title="spatial-audio_preview">
+    <div style="align-items: flex-start; gap: 20px; display: flex">
+      <div style="position: relative">
+        <iframe src="https://player.vimeo.com/video/1028274211?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" frameborder="0" allow="autoplay" style="width: 320px; height: 240px" title="spatial-audio_preview">
         </iframe>
       </div>
       <div>
@@ -221,5 +220,5 @@
     </div>
   </div> -->
 
-</body>
+<script src="/electronics.a9af8ec1.js"></script></body>
 </html>

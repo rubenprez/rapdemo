@@ -50,9 +50,9 @@ html {
 
 .sr-only.focusable:active, .sr-only.focusable:focus {
   clip: auto;
+  height: auto;
   white-space: inherit;
   width: auto;
-  height: auto;
   margin: 0;
   position: static;
   overflow: visible;
@@ -143,6 +143,11 @@ html {
 
   pre, blockquote {
     border: 1px solid# ;
+  }
+
+  #bt-speaker-title, #solder-plate-title {
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 }
 /*# sourceMappingURL=index.47ca9330.css.map */

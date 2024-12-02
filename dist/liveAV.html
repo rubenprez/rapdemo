@@ -8,129 +8,132 @@
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="apple-touch-icon" href="/icon.83aa3da3.png">
-  <link rel="stylesheet" href="/normalize.1114379f.css">
-  <link rel="stylesheet" href="/main.c52e0fe2.css">
-  <link rel="stylesheet" type="css/extra.css" href="/extra.3bfa745b.css">
+  <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
+  <link rel="stylesheet" href="/index.6dab377c.css">
+  <link rel="stylesheet" href="/index.47ca9330.css">
+  <link rel="stylesheet" type="css/extra.css" href="/index.26871b4a.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 
   <style>body {
-      margin: 5px;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-size: cover;
-      background-position: center;
-    }
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 0;
+  display: flex;
+}
 
-    header {
-      text-align: center;
-      margin-top: 0;
-    }
+header {
+  text-align: center;
+  margin-top: 0;
+}
 
-    h1, h2, h3, h4, h5, h6, p, a {
-      text-align: center;
-      color: #c50e5a;
-      color: #d981ff;
-      font-family: "Audiowide", sans-serif;
-      font-size: 24px;
-    }
+h1, h2, h3, h4, h5, h6, p, a {
+  text-align: center;
+  color: #c50e5a;
+  font-family: Audiowide, sans-serif;
+  font-size: 24px;
+}
 
-    h1.text-effect {
-      font-size: 75px;
-    }
+h1.text-effect {
+  font-size: 75px;
+}
 
-    .title-button {
-      cursor: pointer;
-      text-decoration: none;
-      color: #0e94c5;
-      font-family: "Audiowide", sans-serif;
-      font-size: 110px;
-      margin-bottom: 10px;
-    }
+.title-button {
+  cursor: pointer;
+  color: #0e94c5;
+  margin-bottom: 10px;
+  font-family: Audiowide, sans-serif;
+  font-size: 110px;
+  text-decoration: none;
+}
 
-    .videos-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 36px;
-      width: 100%;
-    }
+.videos-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 36px;
+  display: flex;
+}
 
-    .video {
-      margin-bottom: 50px;
-      text-align: center;
-    }
+.video {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-    iframe {
-      width: 640px;
-      height: 360px;
-    }
+iframe {
+  width: 640px;
+  height: 360px;
+}
 
-    .video p {
-      margin-top: 10px;
-      color: rgb(217, 129, 255);
-      font-family: "Audiowide", sans-serif;
-    }
+.video p {
+  color: #d981ff;
+  margin-top: 10px;
+  font-family: Audiowide, sans-serif;
+}
 
-  /* Slideshow container */
-  .slideshow-container {
+.slideshow-container {
   max-width: native;
-  position: relative;
   margin: 10px auto;
+  position: relative;
 }
 
-/* The images inside the slideshow */
 .mySlides img {
-  width: 640px;  /* Full HD width */
-  height: 640px; /* Full HD height */
-  object-fit: cover; /* Ensures the image fills the box while maintaining aspect ratio */
+  object-fit: cover;
+  width: 640px;
+  height: 640px;
 }
 
+.mySlides {
+  display: none;
+}
 
-    .mySlides {
-      display: none;
-    }
+img {
+  width: 100%;
+  height: auto;
+}
 
-    img {
-      width: 100%;
-      height: auto;
-    }
+.prev, .next {
+  cursor: pointer;
+  color: #fff;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all .6s;
+  position: absolute;
+  top: 50%;
+}
 
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
+.next {
+  border-radius: 3px 0 0 3px;
+  right: 0;
+}
 
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
+.prev:hover, .next:hover {
+  background-color: #000c;
+}
 
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
 
-    @keyframes fade {
-      from {opacity: 0.4} 
-      to {opacity: 1}
-    }</style>
+  to {
+    opacity: 1;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -231,26 +234,24 @@
   </div>
 
   <!-- JavaScript for slideshow -->
-  <script>var slideIndex = 0;
+  <script>let slideIndex = 0;
 showSlides();
 function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 3 seconds
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for(i = 0; i < slides.length; i++)slides[i].style.display = "none";
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 3 seconds
 }
 function plusSlides(n) {
-  slideIndex += n - 1;
-  showSlides();
-}</script>
+    slideIndex += n - 1;
+    showSlides();
+}
 
-</div></body>
+</script>
+
+</div><script src="/liveAV.79bbb0f3.js"></script></body>
 
 </html>
