@@ -1,3 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 *.m4v filter=lfs diff=lfs merge=lfs -text
+.parcel-cache/data.mdb filter=lfs diff=lfs merge=lfs -text
+dist/Proficiency[[:space:]]copy.82b5fa06.m4v filter=lfs diff=lfs merge=lfs -text
