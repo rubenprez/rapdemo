@@ -35,7 +35,6 @@
 
     h1, h2, h3, h4, h5, h6, p, a {
       color: #c50e5a;
-      color: #d981ff;
       font-family: 'Roboto', sans-serif;
       font-size: 24px;
       text-align: center;
@@ -80,6 +79,33 @@
       font-size: 110px;
       margin-bottom: 50px;
     }
+
+    .title-button:hover {
+  color: #0e94c5; /* Neon green color */
+  text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #ffea00;
+}
+
+.title-button::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #0e94c5;
+  box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.title-button:hover::after {
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+
+
 
     .images-container {
       margin-top: 50px;

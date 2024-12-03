@@ -52,7 +52,7 @@
     p,
     a {
       text-align: center;
-      color: rgb(217, 129, 255);
+      color: #d981ff;
       font-family: "Audiowide", sans-serif;
       font-size: 24px;
     }
@@ -61,10 +61,40 @@
     .title-button {
       cursor: pointer;
       text-decoration: none;
-      color: #0e94c5; /* Change text color if necessary */      font-family: "Audiowide", sans-serif;
+      color: #0e94c5; /* Change text color if necessary */
+      font-family: "Audiowide", sans-serif;
       font-size: 110px;
       margin-bottom: 0px; /* Adjust as needed */
+      transition: text-shadow 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
     }
+
+    .title-button {
+  position: relative;
+}
+
+.title-button:hover {
+  color: #0e94c5; /* Neon green color */
+  text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #ffea00;
+}
+
+.title-button::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #0e94c5;
+  box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.title-button:hover::after {
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
 
     /* Style for the videos container */
     .videos-container {
@@ -236,5 +266,4 @@
   </footer>
 
 </body>
-
 </html>

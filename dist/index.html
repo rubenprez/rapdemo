@@ -56,6 +56,32 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: Audiowide, sans-serif;
   font-size: 110px;
   text-decoration: none;
+  transition: text-shadow .3s, color .3s;
+  position: relative;
+}
+
+.title-button:hover {
+  color: #0e94c5;
+  text-shadow: 4.5px 4.5px #00267d, 5px 2px #c50e5a, 5px 5px #ffea00;
+}
+
+.title-button:after {
+  content: "";
+  transform-origin: 100% 100%;
+  background-color: #0e94c5;
+  width: 100%;
+  height: 5px;
+  transition: transform .5s ease-out;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  box-shadow: 0 0 #c50e5a, 0 0 #c50e5a;
+}
+
+.title-button:hover:after {
+  transform-origin: 0 100%;
+  transform: scaleX(0);
 }
 
 .videos-container {
@@ -219,5 +245,4 @@ footer {
   </footer>
 
 <script src="/rapdemo.3464ddca.js"></script></body>
-
 </html>

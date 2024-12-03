@@ -8,7 +8,7 @@
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Ruben Perez III">
-  
+
   <!-- Stylesheets -->
   <link rel="manifest" href="/site.webmanifest">
   <link rel="apple-touch-icon" href="/icon.b1b2fa1c.png">
@@ -19,10 +19,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <style>body {
-  color: #fff;
-  background: linear-gradient(270deg, #1a003d, #000) 0 0 / 300% 350%;
+  color: #000;
+  background: linear-gradient(270deg, #000a3b, #000) 0 0 / 300% 350%;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
   margin: 5px;
   padding: 0;
   font-family: Audiowide, sans-serif;
@@ -54,17 +56,17 @@ header {
   text-decoration: none;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.title-button:hover {
+  color: #0e94c5;
+  text-shadow: 4.5px 4.5px #00267d, 5px 2px #c50e5a, 5px 5px #ffea00;
 }
 
-nav ul li {
-  display: inline-block;
+.linkedin-button {
+  text-align: center;
+  margin: 20px 0;
 }
 
-nav ul li a {
+.linkedin-button a {
   color: #fff;
   background: linear-gradient(90deg, #0077b5, #1e90ff);
   border-radius: 25px;
@@ -74,15 +76,15 @@ nav ul li a {
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  transition: background .4s, transform .2s;
+  transition: background .4s, transform .2s, box-shadow .3s;
   display: inline-flex;
   box-shadow: 0 4px 6px #0003;
 }
 
-nav ul li a:hover {
+.linkedin-button a:hover {
   background: linear-gradient(90deg, #1e90ff, #0077b5);
   transform: scale(1.1);
-  box-shadow: 0 6px 8px #0006;
+  box-shadow: 0 3px 6px #1e90ff99, 0 0 15px #1e90ff80;
 }
 
 .video-container {
@@ -100,96 +102,24 @@ nav ul li a:hover {
   width: 100%;
   height: auto;
 }
-
-.text-section {
-  color: #fff;
-  background: none;
-  border: 2px solid #d981ff99;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  font-family: sans-serif;
-  line-height: 1.8;
-}
-
-.text-section a {
-  color: #1e90ff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.text-section a:hover {
-  text-decoration: underline;
-}
-
-.text-section p {
-  margin: 10px 0;
-}
-
-footer a {
-  color: #fff;
-  background: linear-gradient(90deg, #0077b5, #1e90ff);
-  border-radius: 25px;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background .4s, transform .2s, box-shadow .3s;
-  display: inline-flex;
-  position: relative;
-  box-shadow: 0 4px 6px #0003;
-}
-
-footer a:hover {
-  background: linear-gradient(90deg, #1e90ff, #0077b5);
-  transform: scale(1.1);
-  box-shadow: 0 3px 6px #1e90ff99, 0 0 15px #1e90ff80;
-}
-
-footer a:before {
-  content: "";
-  filter: blur(5px);
-  opacity: 0;
-  z-index: -1;
-  background: linear-gradient(45deg, #c50e5a, #0077b5);
-  border-radius: 30px;
-  transition: opacity .4s;
-  position: absolute;
-  inset: -1px;
-}
-
-footer a:hover:before {
-  opacity: 1;
-}
 </style>
 </head>
 <body>
   <header>
-    <!-- Clickable title button -->
     <div class="title-wrapper" onclick="location.href='index.html';">
       <div class="title-button">Ruben Perez III</div>
     </div>
-   
+  </header>
 
-    <footer>
-      <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-    </footer>
+  <div class="linkedin-button">
+    <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  </div>
 
   <div class="video-container">
     <iframe src="https://player.vimeo.com/video/1034656812?badge=0&amp;autopause=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;quality=1080p" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Proficiency">
     </iframe>
   </div>
-
- <!-- <section class="text-section">
-    <p>With over 10 years of hands-on experience in both Audio Visual production and Quality Assurance testing, Ruben Perez III combines technical proficiency with creative insight to deliver top-tier results across a range of multimedia projects.</p>
-    <p>As an Audio Visual expert, Ruben has excelled in roles such as Front of House Engineer, Stage Monitor Engineer, and Lighting Designer, mastering live sound and studio production. His current multimedia projects include recording dialogue and sound design for an expansive 300+ page audiobook, as well as producing lo-fi, hip-hop beats in his studio. Ruben’s workflow is powered by cutting-edge equipment like the Universal Audio Apollo Twin MKII interface, SSL-Six Audio Mixer, and Ableton Live 12 suite on macOS.</p>
-    <p>In his parallel career in Quality Assurance, Ruben is skilled in testing multimedia software and hardware performance across Windows PC, macOS, iOS, and Android platforms. Proficient in project management tools like Jira and TestRail, with significant experience in debugging and optimizing audio applications, including Meta XR Audio Universal HRTF (head-related transfer function) plugins for augmented reality Android applications.</p>
-    <p>Driven by a strong passion for technology, creativity, and innovation, Ruben combines his extensive knowledge of A/V production with his expertise in QA testing, making him a vital contributor to any multimedia project.</p>
-  </section>-->
-</header><script src="/About.36da4070.js"></script></body>
+<script src="/About.36da4070.js"></script></body>
 </html>
