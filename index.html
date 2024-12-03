@@ -20,10 +20,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-image: ();
-      background-size: cover;
-      background-position: center;
-      overflow-x: hidden; /* Prevent horizontal scrolling */
+      overflow-x: hidden;
+      background-color: #000; /* Background color */
+      color: #fff; /* Text color */
     }
 
     header {
@@ -31,48 +30,15 @@
       margin-top: 0;
     }
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin-top: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-inline: 0;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a {
-      text-align: center;
-      color: #d981ff;
-      font-family: "Audiowide", sans-serif;
-      font-size: 24px;
-    }
-
-    /* Style for the clickable button */
     .title-button {
       cursor: pointer;
       text-decoration: none;
-      color: #0e94c5; /* Change text color if necessary */
+      color: #0e94c5;
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
-      margin-bottom: 0px; /* Adjust as needed */
-      transition: text-shadow 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+      margin-bottom: 0;
     }
-
-    .title-button {
-  position: relative;
-}
-
-.title-button:hover {
+    .title-button:hover {
   color: #0e94c5; /* Neon green color */
   text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #ffea00;
 }
@@ -95,8 +61,6 @@
   transform: scaleX(0);
   transform-origin: bottom left;
 }
-
-    /* Style for the videos container */
     .videos-container {
       display: flex;
       flex-wrap: wrap;
@@ -107,56 +71,24 @@
       width: 100%;
     }
 
-    /* Style for each video */
     .video {
       flex: 1;
       max-width: calc(33.33% - 20px);
       position: relative;
-      margin: 0 0 20px;
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
+      margin: 0 10px 20px;
     }
 
-    /* Style for video dimensions */
     video {
       width: 100%;
       height: auto;
-      min-width: 240px;
     }
 
-    /* Adjust video size for smaller screens */
     @media screen and (max-width: 768px) {
-      video {
-        flex: 1 0 100%;
+      .video {
         max-width: 100%;
       }
     }
 
-    /* Style for section titles */
-    .section-titles {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 0;
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .section-title {
-      margin: 0 20px;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #000000;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    /* Style for overlay button */
     .overlay-button {
       position: absolute;
       top: 50%;
@@ -169,59 +101,49 @@
       font-size: 16px;
       color: #000;
       cursor: pointer;
-      display: none; /* Initially hide the overlay button */
+      display: none;
     }
 
-    /* Show overlay button on hover */
     .video:hover .overlay-button {
       display: block;
     }
 
-    /* Fade-in animation */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    /* Style for text section */
     .text-section {
       text-align: center;
-      margin-top: 0;
+      margin-top: 20px;
     }
 
     .text-section p {
       color: #c50e5a;
       font-size: 50px;
       font-family: "Audiowide", sans-serif;
+      margin: 10px 0;
     }
 
+    .description {
+      color: #fff;
+      font-size: 18px;
+      font-family: "Audiowide", sans-serif;
+      display: none;
+      margin-top: 5px;
+    }
+
+    .text-section p + .description {
+      display: block;
+    }
   </style>
 </head>
 
 <body>
-
   <header>
-    <!-- Clickable title button with adjusted surface area -->
     <div class="title-wrapper" onclick="location.href='index.html';">
       <div class="title-button">Ruben Perez III</div>
     </div>
-    <!-- Section titles -->
-    <!--<div class="section-titles">
-      <h2 class="section-title"><a href="liveAV.html">Audio / Video / Lighting</a></h2>
-      <h2 class="section-title"><a href="sounds.html">Sounds</a></h2>
-      <h2 class="section-title"><a href="electronics.html">Electronics</a></h2>
-    </div> -->
   </header>
 
-  <!-- Videos contaiiner -->
   <div class="videos-container">
-    <!-- First video -->
     <div class="video">
-      <a href="electronics.html">
+      <a href="electronics.html" class="video-link" onmouseover="showDescription('Electronics')" onmouseout="hideDescription()">
         <video autoplay loop muted>
           <source src="media/cyberpunk_AR.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -230,19 +152,18 @@
       </a>
     </div>
 
-    <!-- Second video -->
     <div class="video">
-      <a href="sounds.html" class="video-link">
+      <a href="sounds.html" class="video-link" onmouseover="showDescription('Sounds')" onmouseout="hideDescription()">
         <video autoplay loop muted>
           <source src="media/cyberpunk_beats.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
-        <button class="overlay-button">Dj Mixes & Sounds</button>
+        <button class="overlay-button">DJ Mixes & Sounds</button>
       </a>
     </div>
 
-    <!-- Third video -->
     <div class="video">
-      <a href="liveAV.html">
+      <a href="liveAV.html" class="video-link" onmouseover="showDescription('LiveAV')" onmouseout="hideDescription()">
         <video autoplay loop muted>
           <source src="media/cyberpunk_liveAV.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -252,18 +173,130 @@
     </div>
   </div>
 
-  <!-- Text section -->
   <section class="text-section">
     <p>Digital Media Specialist</p>
+    <div class="description" id="description"></div>
   </section>
 
   <footer>
     <nav>
-      <ul>
-        <li><a href="About.html">About RP III</a></li>
+      <ul class="footer-list">
+        <li>
+          <a href="About.html" class="about-button">About RP III</a>
+        </li>
       </ul>
     </nav>
   </footer>
+  
+  <style>
+    /* Reset for footer list to remove bullet and avoid layout shifts */
+    .footer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* Fix footer positioning */
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+  
+    /* Style for the "About RP III" button */
+    .about-button {
+      color: #ffffff;
+      background: linear-gradient(90deg, #0077b5, #1e90ff);
+      font-size: 20px;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: bold;
+      transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: relative; /* Ensures no layout shifts */
+    }
+  
+    .about-button:hover {
+      background: linear-gradient(90deg, #1e90ff, #0077b5);
+      transform: scale(1.1);
+      box-shadow: 0 3px 6px rgba(30, 144, 255, 0.6), 0 0 15px rgba(30, 144, 255, 0.5);
+    }
+  
+    /* Overlay button hover effect, no impact on layout */
+    .overlay-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #000;
+      cursor: pointer;
+      display: none;
+    }
+  
+    .video:hover .overlay-button {
+      display: block;
+    }
+  
+    .videos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 85px;
+      max-width: 1200px;
+      width: 100%;
+    }
+  
+    .video {
+      flex: 1;
+      max-width: calc(33.33% - 20px);
+      position: relative;
+      margin: 0 10px 20px;
+    }
+  
+    video {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  
 
+  <script>
+    function showDescription(type) {
+      const description = document.getElementById('description');
+      switch (type) {
+        case 'Electronics':
+          description.textContent = 'Explore innovative test demos and electronics.';
+          break;
+        case 'Sounds':
+          description.textContent = 'Listen to DJ mixes and sound design projects.';
+          break;
+        case 'LiveAV':
+          description.textContent = 'View live audio and visual productions.';
+          break;
+        default:
+          description.textContent = '';
+      }
+      description.style.display = 'block';
+    }
+
+    function hideDescription() {
+      const description = document.getElementById('description');
+      description.style.display = 'none';
+    }
+  </script>
 </body>
+
 </html>
