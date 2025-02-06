@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>RubenPerezIII</title>
@@ -13,9 +12,19 @@
   <link rel="stylesheet" href="/index.47ca9330.css">
   <link rel="stylesheet" type="css/extra.css" href="/index.26871b4a.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  <style>body {
+  <style>#bgCanvas {
+  z-index: -1;
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  top: 27.2%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+}
+
+body {
   color: #fff;
-  background-color: #000;
+  background-color: #0000;
   flex-direction: column;
   align-items: center;
   margin: 5px;
@@ -36,6 +45,7 @@ header {
   font-family: Audiowide, sans-serif;
   font-size: 110px;
   text-decoration: none;
+  position: relative;
 }
 
 .title-button:hover {
@@ -126,19 +136,82 @@ video {
   margin-top: 5px;
   font-family: Audiowide, sans-serif;
   font-size: 24px;
-  display: none;
+  transition: transform .3s ease-in-out;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (width <= 768px) {
+  .description {
+    font-size: 18px;
+    top: 90%;
+  }
 }
 
 .text-section p + .description {
   display: block;
 }
+
+.footer-list {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  padding: 20px;
+}
+
+.about-button {
+  color: #fff;
+  background: linear-gradient(90deg, #0077b5, #c50e5a);
+  border-radius: 25px;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background .4s, transform .2s, box-shadow .3s;
+  display: inline-flex;
+  position: relative;
+  box-shadow: 0 4px 6px #0003;
+}
+
+.about-button:hover {
+  background: linear-gradient(90deg, #1e90ff, #0077b5);
+  transform: scale(1.1);
+  box-shadow: 0 3px 6px #1e90ff99, 0 0 15px #1e90ff80;
+}
+
+body {
+  background-color: color: #0f0;
+  font-family: Courier New, Courier, monospace;
+  overflow: hidden;
+}
+
+canvas {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 </style>
 </head>
 
 <body>
+  <canvas id="bgCanvas"></canvas>
+
   <header>
     <div class="title-wrapper" onclick="location.href='index.html';">
-      <div class="title-button">Ruben Perez III</div>
+      <div class="title-button">Ruben Perez</div>
     </div>
   </header>
 
@@ -183,93 +256,14 @@ video {
     <nav>
       <ul class="footer-list">
         <li>
-          <a href="/About.html" class="about-button">About RP III</a>
+          <a href="/About.html" class="about-button">About RP</a>
         </li>
       </ul>
     </nav>
   </footer>
-  
-  <style>.footer-list {
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
 
-footer {
-  text-align: center;
-  width: 100%;
-  margin-top: auto;
-  padding: 20px;
-}
-
-.about-button {
-  color: #fff;
-  background: linear-gradient(90deg, #0077b5, #c50e5a);
-  border-radius: 25px;
-  align-items: center;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background .4s, transform .2s, box-shadow .3s;
-  display: inline-flex;
-  position: relative;
-  box-shadow: 0 4px 6px #0003;
-}
-
-.about-button:hover {
-  background: linear-gradient(90deg, #1e90ff, #0077b5);
-  transform: scale(1.1);
-  box-shadow: 0 3px 6px #1e90ff99, 0 0 15px #1e90ff80;
-}
-
-.overlay-button {
-  color: #000;
-  cursor: pointer;
-  background-color: #ffffff80;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.video:hover .overlay-button {
-  display: block;
-}
-
-.videos-container {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 85px;
-  display: flex;
-}
-
-.video {
-  flex: 1;
-  max-width: calc(33.33% - 20px);
-  margin: 0 10px 20px;
-  position: relative;
-}
-
-video {
-  width: 100%;
-  height: auto;
-}
-</style>
-  
-
-  <script>function showDescription(type) {
+  <script>// Description show/hide functions for video hover
+function showDescription(type) {
     const description = document.getElementById('description');
     switch(type){
         case 'Electronics':
@@ -290,8 +284,44 @@ function hideDescription() {
     const description = document.getElementById('description');
     description.style.display = 'none';
 }
+// Matrix Digital Rain effect code
+const canvas = document.getElementById("bgCanvas");
+const ctx = canvas.getContext("2d");
+// Make the canvas fill the entire screen
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+const characters = "hireRubenPerez1-12-85";
+const drops = [];
+const fontSize = 18;
+const columns = canvas.width / fontSize;
+for(let i = 0; i < columns; i++)drops.push({
+    x: i * fontSize,
+    y: Math.random() * canvas.height,
+    speed: Math.random() * 3 + 2,
+    text: getRandomCharacter()
+});
+function getRandomCharacter() {
+    return characters.charAt(Math.floor(Math.random() * characters.length));
+}
+function animate() {
+    ctx.fillStyle = "rgba(0, 0, 0, .05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#00ff00";
+    ctx.font = `${fontSize}px Courier`;
+    drops.forEach((drop)=>{
+        drop.text = getRandomCharacter();
+        ctx.fillText(drop.text, drop.x, drop.y);
+        drop.y += drop.speed;
+        if (drop.y > canvas.height) drop.y = Math.random() * -100;
+    });
+    requestAnimationFrame(animate);
+}
+animate();
 
 </script>
 <script src="/rapdemo.3464ddca.js"></script></body>
-
 </html>

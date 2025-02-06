@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>RubenPerezIII</title>
@@ -14,6 +13,19 @@
   <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <style>
+    /* Ensure full-screen canvas backdrop */
+    #bgCanvas {
+  position: absolute;
+  top: 27.2%; 
+  left: 50%;   /* Start from the center */
+  width: 45%;  /* Covers 45% of the total width */
+  height: 100%;
+  z-index: -1; /* Keep canvas behind content */
+  transform: translate(-50%, -15%); /* Center horizontally while adjusting vertically */
+}
+
+
+
     body {
       margin: 5px;
       padding: 0;
@@ -21,8 +33,8 @@
       flex-direction: column;
       align-items: center;
       overflow-x: hidden;
-      background-color: #000; /* Background color */
-      color: #fff; /* Text color */
+      background-color: transparent;
+      color: #fff;
     }
 
     header {
@@ -37,30 +49,33 @@
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
       margin-bottom: 0;
+      position: relative;
     }
+
     .title-button:hover {
-  color: #0e94c5; /* Neon green color */
-  text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #ffea00;
-}
+      color: #0e94c5; 
+      text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #ffea00;
+    }
 
-.title-button::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #0e94c5;
-  box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.5s ease-out;
-}
+    .title-button::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #0e94c5;
+      box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.5s ease-out;
+    }
 
-.title-button:hover::after {
-  transform: scaleX(0);
-  transform-origin: bottom left;
-}
+    .title-button:hover::after {
+      transform: scaleX(0);
+      transform-origin: bottom left;
+    }
+
     .videos-container {
       display: flex;
       flex-wrap: wrap;
@@ -121,23 +136,91 @@
     }
 
     .description {
-      color: #fff;
-      font-size: 24px;
-      font-family: "Audiowide", sans-serif;
-      display: none;
-      margin-top: 5px;
-    }
+  position: absolute;  /* Position the element relative to its closest positioned ancestor */
+  top: 18%;            /* Adjust top position (in percentage of parent container's height) */
+  left: 50%;           /* Adjust left position (in percentage of parent container's width) */
+  transform: translate(-50%, -50%);  /* This centers the element by offsetting half of its own width and height */
+  color: #fff;
+  font-size: 24px;
+  font-family: "Audiowide", sans-serif;
+  margin-top: 5px;     /* Fine-tune vertical placement */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* If you want additional control over placement based on screen size or other factors */
+@media screen and (max-width: 768px) {
+  .description {
+    top: 90%;  /* Adjust for smaller screens */
+    font-size: 18px;  /* Reduce font size for mobile devices */
+  }
+}
+
 
     .text-section p + .description {
       display: block;
+    }
+
+    /* Footer styling */
+    .footer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .about-button {
+      color: #ffffff;
+      background: linear-gradient(90deg, #0077b5, #c50e5a);
+      font-size: 20px;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: bold;
+      transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .about-button:hover {
+      background: linear-gradient(90deg, #1e90ff, #0077b5);
+      transform: scale(1.1);
+      box-shadow: 0 3px 6px rgba(30, 144, 255, 0.6), 0 0 15px rgba(30, 144, 255, 0.5);
+    }
+
+    /* Matrix Digital Rain effect */
+    body {
+      background-color: 
+      color: #00ff00;
+      font-family: "Courier New", Courier, monospace;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
   </style>
 </head>
 
 <body>
+  <canvas id="bgCanvas"></canvas>
+
   <header>
     <div class="title-wrapper" onclick="location.href='index.html';">
-      <div class="title-button">Ruben Perez III</div>
+      <div class="title-button">Ruben Perez</div>
     </div>
   </header>
 
@@ -182,98 +265,14 @@
     <nav>
       <ul class="footer-list">
         <li>
-          <a href="About.html" class="about-button">About RP III</a>
+          <a href="About.html" class="about-button">About RP</a>
         </li>
       </ul>
     </nav>
   </footer>
-  
-  <style>
-    /* Reset for footer list to remove bullet and avoid layout shifts */
-    .footer-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    /* Fix footer positioning */
-    footer {
-      margin-top: auto;
-      padding: 20px;
-      text-align: center;
-      width: 100%;
-    }
-  
-    /* Style for the "About RP III" button */
-    .about-button {
-      color: #ffffff;
-      background: linear-gradient(90deg, #0077b5, #c50e5a);
-      font-size: 20px;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 25px;
-      display: inline-flex;
-      align-items: center;
-      font-weight: bold;
-      transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      position: relative; /* Ensures no layout shifts */
-    }
-  
-    .about-button:hover {
-      background: linear-gradient(90deg, #1e90ff, #0077b5);
-      transform: scale(1.1);
-      box-shadow: 0 3px 6px rgba(30, 144, 255, 0.6), 0 0 15px rgba(30, 144, 255, 0.5);
-    }
-  
-    /* Overlay button hover effect, no impact on layout */
-    .overlay-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px 20px;
-      background-color: rgba(255, 255, 255, 0.5);
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      color: #000;
-      cursor: pointer;
-      display: none;
-    }
-  
-    .video:hover .overlay-button {
-      display: block;
-    }
-  
-    .videos-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-top: 85px;
-      max-width: 1200px;
-      width: 100%;
-    }
-  
-    .video {
-      flex: 1;
-      max-width: calc(33.33% - 20px);
-      position: relative;
-      margin: 0 10px 20px;
-    }
-  
-    video {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-  
 
   <script>
+    // Description show/hide functions for video hover
     function showDescription(type) {
       const description = document.getElementById('description');
       switch (type) {
@@ -296,7 +295,59 @@
       const description = document.getElementById('description');
       description.style.display = 'none';
     }
+
+    // Matrix Digital Rain effect code
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Make the canvas fill the entire screen
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    const characters = "hireRubenPerez1-12-85";
+    const drops = [];
+    const fontSize = 18;
+    const columns = canvas.width / fontSize;
+
+    for (let i = 0; i < columns; i++) {
+      drops.push({
+        x: i * fontSize,
+        y: Math.random() * canvas.height,
+        speed: Math.random() * 3 + 2,
+        text: getRandomCharacter()
+      });
+    }
+
+    function getRandomCharacter() {
+      return characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    function animate() {
+      ctx.fillStyle = "rgba(0, 0, 0, .05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ff00"; 
+      ctx.font = `${fontSize}px Courier`;
+
+      drops.forEach(drop => {
+        drop.text = getRandomCharacter();
+        ctx.fillText(drop.text, drop.x, drop.y);
+        drop.y += drop.speed;
+
+        if (drop.y > canvas.height) {
+          drop.y = Math.random() * -100;
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
   </script>
 </body>
-
 </html>

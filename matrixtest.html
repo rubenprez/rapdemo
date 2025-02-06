@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Digital Rain</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #00ff00; /* Matrix green */
+            font-family: "Courier New", Courier, monospace;
+            overflow: hidden;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    <script>
+        // Set up the canvas
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Make the canvas fill the entire screen
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        // Random characters and numbers for the digital rain effect
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+        // Create an array to hold the drops
+        const drops = [];
+        const fontSize = 20;
+        const columns = canvas.width / fontSize; // Number of columns based on screen width
+        for (let i = 0; i < columns; i++) {
+            drops.push({
+                x: i * fontSize,
+                y: Math.random() * canvas.height,
+                speed: Math.random() * 3 + 2, // Random speed
+                text: getRandomCharacter() // Initially set with a random character
+            });
+        }
+
+        // Function to get a random character
+        function getRandomCharacter() {
+            return characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+
+        // Animation loop
+        function animate() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; // Light black background to create trail effect
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#00ff00"; // Matrix green color
+            ctx.font = `${fontSize}px Courier`;
+
+            // Loop through each drop
+            drops.forEach(drop => {
+                // Update the character to show
+                drop.text = getRandomCharacter();
+
+                // Draw the character
+                ctx.fillText(drop.text, drop.x, drop.y);
+
+                // Update the drop's position
+                drop.y += drop.speed;
+
+                // Reset the drop to the top once it goes off screen
+                if (drop.y > canvas.height) {
+                    drop.y = Math.random() * -100; // Reset from a random position above
+                }
+            });
+
+            // Continue the animation
+            requestAnimationFrame(animate);
+        }
+
+        // Start the animation
+        animate();
+    </script>
+</body>
+
+</html>
