@@ -137,7 +137,7 @@
 
     .description {
   position: absolute;  /* Position the element relative to its closest positioned ancestor */
-  top: 18%;            /* Adjust top position (in percentage of parent container's height) */
+  top: 17%;            /* Adjust top position (in percentage of parent container's height) */
   left: 50%;           /* Adjust left position (in percentage of parent container's width) */
   transform: translate(-50%, -50%);  /* This centers the element by offsetting half of its own width and height */
   color: #fff;
@@ -186,6 +186,8 @@
       border-radius: 25px;
       display: inline-flex;
       align-items: center;
+      font-family: "Audiowide", sans-serif;
+
       font-weight: bold;
       transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -309,7 +311,7 @@
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    const characters = "hireRubenPerez1-12-85";
+    const characters = "hire Ruben Anthony Perez III 01-12-85";
     const drops = [];
     const fontSize = 18;
     const columns = canvas.width / fontSize;
