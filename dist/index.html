@@ -40,7 +40,7 @@ header {
 
 .title-button {
   cursor: pointer;
-  color: #0e94c5;
+  color: #0077b5;
   margin-bottom: 0;
   font-family: Audiowide, sans-serif;
   font-size: 110px;
@@ -49,8 +49,8 @@ header {
 }
 
 .title-button:hover {
-  color: #0e94c5;
-  text-shadow: 4.5px 4.5px #00267d, 5px 2px #c50e5a, 5px 5px #ffea00;
+  color: #0077b5;
+  text-shadow: 4.5px 4.5px #00267d, 5px 2px #c50e5a, 5px 5px #fff693;
 }
 
 .title-button:after {
@@ -107,6 +107,7 @@ video {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
+  font-family: Audiowide, sans-serif;
   font-size: 16px;
   display: none;
   position: absolute;
@@ -121,26 +122,10 @@ video {
 
 .text-section {
   text-align: center;
-  margin-top: 20px;
-}
-
-.text-section p {
-  color: #c50e5a;
-  margin: 10px 0;
-  font-family: Audiowide, sans-serif;
-  font-size: 50px;
-}
-
-.description {
   color: #fff;
-  margin-top: 5px;
-  font-family: Audiowide, sans-serif;
-  font-size: 24px;
-  transition: transform .3s ease-in-out;
-  position: absolute;
-  top: 17%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-shadow: 0 0 6px #fffc, 0 0 12px #fff9, 0 0 18px #fff6;
+  padding: 10px;
+  font-size: 38px;
 }
 
 @media screen and (width <= 768px) {
@@ -248,39 +233,60 @@ canvas {
     </div>
   </div>
 
-  <section class="text-section">
+  <section class="text-section cyber-outline">
     <p>Digital Media Specialist</p>
     <div class="description" id="description"></div>
-  </section>
+</section>
+
+<style>.cyber-outline p {
+  color: #000;
+  text-shadow: 0 0 15px #0077b5, 0 0 15px #0077b5;
+  font-family: Audiowide, sans-serif;
+  font-size: 42px;
+  animation: 2s infinite alternate outline-glow;
+}
+
+@keyframes outline-glow {
+  0% {
+    text-shadow: 0 0 5px #0077b5, 0 0 25px #0077b5;
+  }
+
+  100% {
+    text-shadow: 0 0 20px #0077b5, 0 0 30px #0077b5;
+  }
+}
+</style>
+
+
 
   <footer>
     <nav>
       <ul class="footer-list">
         <li>
-          <a href="/About.html" class="about-button">About RP iii</a>
+          <a href="/About.html" class="about-button">About RP</a>
         </li>
       </ul>
     </nav>
   </footer>
 
   <script>// Description show/hide functions for video hover
-function showDescription(type) {
-    const description = document.getElementById('description');
-    switch(type){
-        case 'Electronics':
-            description.textContent = 'Explore innovative Test Demos and Electronics';
-            break;
-        case 'Sounds':
-            description.textContent = 'Listen to DJ Mixes and Sound Design projects';
-            break;
-        case 'LiveAV':
-            description.textContent = 'View live-Audio and Visual productions';
-            break;
-        default:
-            description.textContent = '';
-    }
-    description.style.display = 'block';
-}
+//function showDescription(type) {
+//const description = document.getElementById('description');
+//switch (type) {
+//case 'Electronics':
+//description.textContent = 'Explore innovative Test Demos and Electronics';
+//break;
+//case 'Sounds':
+//description.textContent = 'Listen to DJ Mixes and Sound Design projects';
+//break;
+//case 'LiveAV':
+//description.textContent = 'View live-Audio and Visual productions';
+//break;
+//default:
+//description.textContent = '';
+//}
+//description.style.display = 'block';
+//}
 function hideDescription() {
     const description = document.getElementById('description');
     description.style.display = 'none';

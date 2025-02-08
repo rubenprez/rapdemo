@@ -45,7 +45,7 @@
     .title-button {
       cursor: pointer;
       text-decoration: none;
-      color: #0e94c5;
+      color: #0077b5;
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
       margin-bottom: 0;
@@ -53,8 +53,8 @@
     }
 
     .title-button:hover {
-      color: #0e94c5; 
-      text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #ffea00;
+      color: #0077b5; 
+      text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #fff693;
     }
 
     .title-button::after {
@@ -117,6 +117,8 @@
       color: #000;
       cursor: pointer;
       display: none;
+      font-family: "Audiowide", sans-serif;
+
     }
 
     .video:hover .overlay-button {
@@ -124,28 +126,18 @@
     }
 
     .text-section {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .text-section p {
-      color: #c50e5a;
-      font-size: 50px;
-      font-family: "Audiowide", sans-serif;
-      margin: 10px 0;
-    }
-
-    .description {
-  position: absolute;  /* Position the element relative to its closest positioned ancestor */
-  top: 17%;            /* Adjust top position (in percentage of parent container's height) */
-  left: 50%;           /* Adjust left position (in percentage of parent container's width) */
-  transform: translate(-50%, -50%);  /* This centers the element by offsetting half of its own width and height */
+  text-align: center;
+  padding: 10px; /* Reduced padding for tighter border */
   color: #fff;
-  font-size: 24px;
-  font-family: "Audiowide", sans-serif;
-  margin-top: 5px;     /* Fine-tune vertical placement */
-  transition: transform 0.3s ease-in-out;
+  font-size: 38px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 
+               0 0 12px rgba(255, 255, 255, 0.6), 
+               0 0 18px rgba(255, 255, 255, 0.4);
 }
+
+
+
+
 
 /* If you want additional control over placement based on screen size or other factors */
 @media screen and (max-width: 768px) {
@@ -258,16 +250,33 @@
     </div>
   </div>
 
-  <section class="text-section">
+  <section class="text-section cyber-outline">
     <p>Digital Media Specialist</p>
     <div class="description" id="description"></div>
-  </section>
+</section>
+
+<style>
+.cyber-outline p {
+    font-size: 42px;
+    color: #000000;
+    text-shadow: 0 0 15px #0077b5, 0 0 15px #0077b5;
+    animation: outline-glow 2s infinite alternate;
+    font-family: "Audiowide", sans-serif;
+}
+
+@keyframes outline-glow {
+    0% { text-shadow: 0 0 5px #0077b5, 0 0 25px #0077b5; }
+    100% { text-shadow: 0 0 20px #0077b5, 0 0 30px #0077b5; }
+}
+</style>
+
+
 
   <footer>
     <nav>
       <ul class="footer-list">
         <li>
-          <a href="About.html" class="about-button">About RP iii</a>
+          <a href="About.html" class="about-button">About RP</a>
         </li>
       </ul>
     </nav>
@@ -275,23 +284,23 @@
 
   <script>
     // Description show/hide functions for video hover
-    function showDescription(type) {
-      const description = document.getElementById('description');
-      switch (type) {
-        case 'Electronics':
-          description.textContent = 'Explore innovative Test Demos and Electronics';
-          break;
-        case 'Sounds':
-          description.textContent = 'Listen to DJ Mixes and Sound Design projects';
-          break;
-        case 'LiveAV':
-          description.textContent = 'View live-Audio and Visual productions';
-          break;
-        default:
-          description.textContent = '';
-      }
-      description.style.display = 'block';
-    }
+    //function showDescription(type) {
+      //const description = document.getElementById('description');
+      //switch (type) {
+        //case 'Electronics':
+          //description.textContent = 'Explore innovative Test Demos and Electronics';
+          //break;
+        //case 'Sounds':
+          //description.textContent = 'Listen to DJ Mixes and Sound Design projects';
+          //break;
+        //case 'LiveAV':
+          //description.textContent = 'View live-Audio and Visual productions';
+          //break;
+        //default:
+          //description.textContent = '';
+      //}
+      //description.style.display = 'block';
+    //}
 
     function hideDescription() {
       const description = document.getElementById('description');
