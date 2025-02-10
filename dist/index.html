@@ -74,18 +74,19 @@ header {
 
 .videos-container {
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
   width: 100%;
-  max-width: 1200px;
-  margin-top: 85px;
+  max-width: 800px;
+  margin: auto;
   display: flex;
 }
 
 .video {
-  flex: 1;
-  max-width: calc(33.33% - 20px);
-  margin: 0 10px 20px;
+  flex: 0 calc(50% - 20px);
+  max-width: 350px;
+  margin: 75px 10px;
   position: relative;
 }
 
@@ -212,15 +213,15 @@ canvas {
       </a>
     </div>
 
-    <div class="video">
-      <a href="/sounds.html" class="video-link" onmouseover="showDescription('Sounds')" onmouseout="hideDescription()">
-        <video autoplay="" loop="" muted="">
-          <source src="/cyberpunk_beats.5dbd5363.mp4" type="video/mp4">
+    <!--<div class="video">
+      <a href="sounds.html" class="video-link" onmouseover="showDescription('Sounds')" onmouseout="hideDescription()">
+        <video autoplay loop muted>
+          <source src="media/cyberpunk_beats.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <button class="overlay-button">DJ Mixes & Sound Design</button>
       </a>
-    </div>
+    </div> -->
 
     <div class="video">
       <a href="/liveAV.html" class="video-link" onmouseover="showDescription('LiveAV')" onmouseout="hideDescription()">
@@ -228,13 +229,13 @@ canvas {
           <source src="/cyberpunk_liveAV.08490ebd.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <button class="overlay-button">Live Production Audio Visual</button>
+        <button class="overlay-button">Live-Production Audio Visual</button>
       </a>
     </div>
   </div>
 
   <section class="text-section cyber-outline">
-    <p>AV Systems & QA Engineer</p>
+    <p>QA & AV Systems Engineer</p>
     <div class="description" id="description"></div>
 </section>
 
