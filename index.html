@@ -25,7 +25,7 @@
 }
 
     body {
-      margin: 5px;
+      margin: 15px;
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -37,22 +37,45 @@
 
     header {
       text-align: center;
-      margin-top: 0;
+      margin-top: 30;
     }
 
     .title-button {
       cursor: pointer;
       text-decoration: none;
-      color: #0077b5;
+      color: #e6e6e6;
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
-      margin-bottom: 0;
+      margin-bottom: 75;
       position: relative;
+      font-size: 110px;
+      color: #000000;
+      text-shadow: 
+        0 0 10px rgba(0, 119, 181, 0.9), /* Outer glow */
+        0 0 5px rgba(0, 119, 181, 0.6), /* Mid glow */
+        0 0 2px rgba(0, 119, 181, 0.8) inset; /* Inner glow effect */
+      filter: drop-shadow(0px 0px 10px #0077b5); /* Extra glow for visibility */
+      animation: outline-glow 2s infinite alternate;
+    }
+
+    @keyframes outline-glow {
+      0% { 
+          text-shadow: 
+              0 0 5px rgba(0, 119, 181, 0.8), 
+              0 0 15px rgba(0, 119, 181, 0.6), 
+              0 0 3px rgba(0, 119, 181, 0.9) inset;
+      }
+      100% { 
+          text-shadow: 
+              0 0 15px rgba(0, 119, 181, 1), 
+              0 0 25px rgba(0, 119, 181, 0.8), 
+              0 0 5px rgba(0, 119, 181, 1) inset;
+      }
     }
 
     .title-button:hover {
-      color: #0077b5; 
-      text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #fff693;
+      color: #000000; 
+      text-shadow: 4.5px 4.5px 0px #ffffff, 5px 2px 0px #c50e5a, 5px 5px 0px #ffffff;
     }
 
     .title-button::after {
@@ -171,7 +194,7 @@
 
     footer {
       margin-top: auto;
-      padding: 20px;
+      padding: 5px;
       text-align: center;
       width: 100%;
     }
@@ -180,7 +203,7 @@
       color: #000000;
       background: linear-gradient(90deg, #0077b5, #c50e5a);
       font-size: 24px;
-      padding: 5px 15px;
+      padding: 5px 10px;
       text-decoration: none;
       border-radius: 25px;
       display: inline-flex;
@@ -211,7 +234,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
+      z-index: 1;
     }
   </style>
 </head>

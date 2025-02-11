@@ -27,7 +27,7 @@ body {
   background-color: #0000;
   flex-direction: column;
   align-items: center;
-  margin: 5px;
+  margin: 15px;
   padding: 0;
   display: flex;
   overflow-x: hidden;
@@ -35,22 +35,35 @@ body {
 
 header {
   text-align: center;
-  margin-top: 0;
+  margin-top: 30px;
 }
 
 .title-button {
   cursor: pointer;
-  color: #0077b5;
-  margin-bottom: 0;
+  color: #000;
+  text-shadow: 0 0 10px #0077b5e6, 0 0 5px #0077b599, 0 0 2px #0077b5cc inset;
+  filter: drop-shadow(0 0 10px #0077b5);
+  margin-bottom: 75px;
   font-family: Audiowide, sans-serif;
   font-size: 110px;
   text-decoration: none;
+  animation: 2s infinite alternate outline-glow;
   position: relative;
 }
 
+@keyframes outline-glow {
+  0% {
+    text-shadow: 0 0 5px #0077b5cc, 0 0 15px #0077b599, 0 0 3px #0077b5e6 inset;
+  }
+
+  100% {
+    text-shadow: 0 0 15px #0077b5, 0 0 25px #0077b5cc, 0 0 5px #0077b5 inset;
+  }
+}
+
 .title-button:hover {
-  color: #0077b5;
-  text-shadow: 4.5px 4.5px #00267d, 5px 2px #c50e5a, 5px 5px #fff693;
+  color: #000;
+  text-shadow: 4.5px 4.5px #fff, 5px 2px #c50e5a, 5px 5px #fff;
 }
 
 .title-button:after {
@@ -157,7 +170,7 @@ footer {
   text-align: center;
   width: 100%;
   margin-top: auto;
-  padding: 20px;
+  padding: 5px;
 }
 
 .about-button {
@@ -165,7 +178,7 @@ footer {
   background: linear-gradient(90deg, #0077b5, #c50e5a);
   border-radius: 25px;
   align-items: center;
-  padding: 5px 15px;
+  padding: 5px 10px;
   font-family: Audiowide, sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -191,7 +204,7 @@ body {
 canvas {
   z-index: -1;
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 0;
 }
 </style>

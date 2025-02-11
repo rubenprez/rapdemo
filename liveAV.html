@@ -41,41 +41,31 @@
       font-size: 75px;
     }
 
-    .title-button {
-      cursor: pointer;
-      text-decoration: none;
-      color: #0077b5;
-      font-family: "Audiowide", sans-serif;
-      font-size: 110px;
-      margin-bottom: 10px;
+    .title-button:hover {
+      color: #000000; 
+      text-shadow: 4.5px 4.5px 0px #ffffff, 5px 2px 0px #c50e5a, 5px 5px 0px #ffffff;
+    }
+
+    .title-button::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #0e94c5;
+      box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.5s ease-out;
+    }
+
+    .title-button:hover::after {
+      transform: scaleX(0);
+      transform-origin: bottom left;
     }
 
 
-
-
-    .title-button:hover {
-  color: #0077b5; /* Neon green color */
-  text-shadow: 4.5px 4.5px 0px #00267d, 5px 2px 0px #c50e5a, 5px 5px 0px #ffea00;
-}
-
-.title-button::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #0e94c5;
-  box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.5s ease-out;
-}
-
-.title-button:hover::after {
-  transform: scaleX(0);
-  transform-origin: bottom left;
-}
     
     .videos-container {
       display: flex;
@@ -88,6 +78,7 @@
     .video {
       margin-bottom: 50px;
       text-align: center;
+      
     }
 
     iframe {
@@ -212,55 +203,55 @@
     <iframe src="https://player.vimeo.com/video/1019020762?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
       frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Jazzalley"></iframe>
   </div>
-
-  <!-- Image slideshow -->
+<!-
+  <!-- Image slideshow 
   <div class="slideshow-container">
-    <!-- Slide 1 -->
+    <!-- Slide 1 
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/JnrrQKdD/IMG-0116-2.jpg" alt="Slide 1">
     </div>
 
-    <!-- Slide 2 -->
+    <!-- Slide 2 
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/9MLWgTvx/IMG-0010.jpg" alt="Slide 2">
     </div>
 
-    <!-- Slide 3 -->
+    <!-- Slide 3 
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/BbtJrb3J/IMG-0107.jpg" alt="Slide 3">
     </div>
 
-    <!-- Slide 4 -->
+    <!-- Slide 4 
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/FssSk9xm/jazzalley-m7cl.jpg" alt="Slide 4">
     </div>
 
-    <!-- Slide 5 -->
+    <!-- Slide 5 
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/mZSMrcC8/jazzalley-stage.jpg" alt="Slide 5">
     </div>
     
-    <!-- Slide 6 -->
+    <!-- Slide 6 
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/hPyd9HCm/jazzalley-stageright.jpg" alt="Slide 6">
     </div>
 
-    <!-- Slide 7 -->
+    <!-- Slide 7 
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/vHf5kZZr/IMG-2242.jpg" alt="Slide 7">
     </div>
 
-    <!-- Slide 8-->
+    <!-- Slide 8
     <div class="mySlides fade">
       <img src="https://i.postimg.cc/yNQ15HZh/IMG-1028.jpg" alt="Slide 8">
     </div> 
 
 
 
-    <!-- Next and previous buttons -->
+    <!-- Next and previous buttons 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
+  </div> -->
 
   <!-- JavaScript for slideshow -->
   <script>
