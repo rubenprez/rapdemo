@@ -15,17 +15,17 @@
   <style>
     /* Ensure full-screen canvas backdrop */
     #bgCanvas {
-  position: absolute;
-  top: 27.2%; 
-  left: 50%;   /* Start from the center */
-  width: 45%;  /* Covers 45% of the total width */
-  height: 100%;
-  z-index: -1; /* Keep canvas behind content */
-  transform: translate(-50%, -15%); /* Center horizontally while adjusting vertically */
-}
+      position: absolute;
+      top: 30.2%; 
+      left: 50%;
+      width: 45%;
+      height: 100%;
+      z-index: -1;
+      transform: translate(-50%, -15%);
+    }
 
     body {
-      margin: 15px;
+      margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -37,220 +37,131 @@
 
     header {
       text-align: center;
-      margin-top: 30;
+      margin-top: 25px;
     }
 
     .title-button {
-      cursor: pointer;
+      cursor: none;
       text-decoration: none;
-      color: #e6e6e6;
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
-      margin-bottom: 75;
-      position: relative;
-      font-size: 110px;
-      color: #000000;
-      text-shadow: 
-        0 0 10px rgba(0, 119, 181, 0.9), /* Outer glow */
-        0 0 5px rgba(0, 119, 181, 0.6), /* Mid glow */
-        0 0 2px rgba(0, 119, 181, 0.8) inset; /* Inner glow effect */
-      filter: drop-shadow(0px 0px 10px #0077b5); /* Extra glow for visibility */
-      animation: outline-glow 2s infinite alternate;
+      color: #000;
+      text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #0077b5e6;
+      filter: drop-shadow(0px 0px 10px #0077b5);
+      animation: title-glow 2s infinite alternate;
     }
 
     @keyframes outline-glow {
       0% { 
-          text-shadow: 
-              0 0 5px rgba(0, 119, 181, 0.8), 
-              0 0 15px rgba(0, 119, 181, 0.6), 
-              0 0 3px rgba(0, 119, 181, 0.9) inset;
+        text-shadow: 
+          0 0 5px rgba(0, 119, 181, 0.8), 
+          0 0 15px rgba(0, 119, 181, 0.6), 
+          0 0 3px rgba(0, 119, 181, 0.9) inset;
       }
       100% { 
-          text-shadow: 
-              0 0 15px rgba(0, 119, 181, 1), 
-              0 0 25px rgba(0, 119, 181, 0.8), 
-              0 0 5px rgba(0, 119, 181, 1) inset;
+        text-shadow: 
+          0 0 15px #0077b5, 
+          0 0 25px rgba(0, 119, 181, 0.8), 
+          0 0 5px rgba(0, 119, 181, 1) inset;
       }
     }
 
     .title-button:hover {
-      color: #000000; 
-      text-shadow: 4.5px 4.5px 0px #ffffff, 5px 2px 0px #c50e5a, 5px 5px 0px #ffffff;
-    }
-
-    .title-button::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background-color: #0e94c5;
-      box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
-      transform: scaleX(0);
-      transform-origin: bottom right;
-      transition: transform 0.5s ease-out;
-    }
-
-    .title-button:hover::after {
-      transform: scaleX(0);
-      transform-origin: bottom left;
+      color: #000;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 5px #ff6347;
+      animation: none;
     }
 
     .videos-container {
-  display: flex;
-  justify-content: center; /* Centers the videos horizontally */
-  align-items: center;
-  gap: 40px; /* Adds space between videos */
-  flex-wrap: wrap; /* Ensures responsiveness */
-  width: 100%;
-  max-width: 1200px; /* Adjust as needed */
-  height: auto;
-  margin: auto; /* Centers the entire container */
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+    }
 
-.video {
-  flex: 0 1 calc(50% - 20px); /* Adjust width for centering */
-  max-width: 500px; /* Ensures better positioning */
-  
-}
-
+    .video {
+      flex: 0 1 calc(100% - 10px);
+      max-width: 480px;
+      position: relative;
+    }
 
     video {
       width: 100%;
-      height: auto;
+      height: 640px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       .video {
         max-width: 100%;
       }
     }
 
-    /* Updated overlay button CSS */
-.overlay-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #000;
-  cursor: pointer;
-  display: none;
-  font-family: "Audiowide", sans-serif;
-  z-index: 10; /* Ensure button is above the video */
-}
+    .overlay-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 5px;
+      font-size: 24px;
+      color: #000;
+      cursor: pointer;
+      display: none;
+      font-family: "Audiowide", sans-serif;
+      z-index: 1;
+      pointer-events: auto;
+    }
 
-.video:hover .overlay-button {
-  display: block;
-}
-
-/* Optional: Improve video container hover effect */
-.video {
-  position: relative; /* Needed for absolute positioning of the overlay */
-}
-
-
-    .text-section {
-  text-align: center;
-  padding: 10px; /* Reduced padding for tighter border */
-  color: #fff;
-  font-size: 38px;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 
-               0 0 12px rgba(255, 255, 255, 0.6), 
-               0 0 18px rgba(255, 255, 255, 0.4);
-}
-
-
-
-
-
-/* If you want additional control over placement based on screen size or other factors */
-@media screen and (max-width: 768px) {
-  .description {
-    top: 90%;  /* Adjust for smaller screens */
-    font-size: 18px;  /* Reduce font size for mobile devices */
-  }
-}
-
-
-    .text-section p + .description {
+    .video:hover .overlay-button {
       display: block;
     }
 
-    /* Footer styling */
-    .footer-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .video:hover .overlay-button {
+      pointer-events: auto; /* Only enable interaction when hovered */
     }
 
-    footer {
-      margin-top: auto;
-      padding: 5px;
+    .text-section {
       text-align: center;
-      width: 100%;
+      padding: 5px;
+      margin-top: -55px;
+      color: #fff;
+      font-size: 38px;
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6), 0 0 18px rgba(255, 255, 255, 0.4);
     }
 
-    .about-button {
-      color: #000000;
-      background: linear-gradient(90deg, #0077b5, #c50e5a);
-      font-size: 24px;
-      padding: 5px 10px;
+    .qa-link {
+      font-size: 42px;
+      color: #000;
       text-decoration: none;
-      border-radius: 25px;
-      display: inline-flex;
-      align-items: center;
       font-family: "Audiowide", sans-serif;
-
-      font-weight: bold;
-      transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      position: relative;
+      text-shadow: 0 0 10px rgba(0, 119, 181, 0.9), 0 0 5px rgba(0, 119, 181, 0.6), 0 0 2px rgba(0, 119, 181, 0.8);
     }
 
-    .about-button:hover {
-      background: linear-gradient(90deg, #1e90ff, #0077b5);
-      transform: scale(1.1);
-      box-shadow: 0 3px 6px rgba(30, 144, 255, 0.6), 0 0 15px rgba(30, 144, 255, 0.5);
-    }
-
-    /* Matrix Digital Rain effect */
-    body {
-      background-color: 
-      color: #00ff00;
-      font-family: "Courier New", Courier, monospace;
-      overflow: hidden;
-    }
-
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
+    .qa-link:hover {
+      color: #0077b5;
+      text-shadow: 0 0 15px #000000;
     }
   </style>
 </head>
-
 <body>
   <canvas id="bgCanvas"></canvas>
 
   <header>
-    <div class="title-wrapper" onclick="location.href='index.html';">
+    <div class="title-wrapper"></div>
       <div class="title-button">Ruben Perez</div>
     </div>
   </header>
 
   <div class="videos-container">
     <div class="video">
-      <a href="electronics.html" class="video-link" onmouseover="showDescription('Electronics')" onmouseout="hideDescription()">
+      <a href="electronics.html" class="video-link">
         <video autoplay loop muted>
           <source src="media/cyberpunk_AR.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -259,18 +170,8 @@
       </a>
     </div>
 
-    <!--<div class="video">
-      <a href="sounds.html" class="video-link" onmouseover="showDescription('Sounds')" onmouseout="hideDescription()">
-        <video autoplay loop muted>
-          <source src="media/cyberpunk_beats.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <button class="overlay-button">DJ Mixes & Sound Design</button>
-      </a>
-    </div> -->
-
     <div class="video">
-      <a href="liveAV.html" class="video-link" onmouseover="showDescription('LiveAV')" onmouseout="hideDescription()">
+      <a href="liveAV.html" class="video-link">
         <video autoplay loop muted>
           <source src="media/cyberpunk_liveAV.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -281,82 +182,19 @@
   </div>
 
   <section class="text-section cyber-outline">
-    <p>QA & AV Systems Engineer</p>
+    <a href="about.html" class="qa-link">QA & AV Systems Engineer</a>
     <div class="description" id="description"></div>
-</section>
-
-<style>
-.cyber-outline p {
-    font-size: 42px;
-    color: #000000;
-    text-shadow: 
-        0 0 10px rgba(0, 119, 181, 0.9), /* Outer glow */
-        0 0 5px rgba(0, 119, 181, 0.6), /* Mid glow */
-        0 0 2px rgba(0, 119, 181, 0.8) inset; /* Inner glow effect */
-    filter: drop-shadow(0px 0px 10px #0077b5); /* Extra glow for visibility */
-    animation: outline-glow 2s infinite alternate;
-    font-family: "Audiowide", sans-serif;
-}
-
-@keyframes outline-glow {
-    0% { 
-        text-shadow: 
-            0 0 5px rgba(0, 119, 181, 0.8), 
-            0 0 15px rgba(0, 119, 181, 0.6), 
-            0 0 3px rgba(0, 119, 181, 0.9) inset;
-    }
-    100% { 
-        text-shadow: 
-            0 0 15px rgba(0, 119, 181, 1), 
-            0 0 25px rgba(0, 119, 181, 0.8), 
-            0 0 5px rgba(0, 119, 181, 1) inset;
-    }
-}
-
-</style>
-
-
-
-  <footer>
-    <nav>
-      <ul class="footer-list">
-        <li>
-          <a href="About.html" class="about-button">About RP</a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
+  </section>
 
   <script>
-    // Description show/hide functions for video hover
-    //function showDescription(type) {
-      //const description = document.getElementById('description');
-      //switch (type) {
-        //case 'Electronics':
-          //description.textContent = 'Explore innovative Test Demos and Electronics';
-          //break;
-        //case 'Sounds':
-          //description.textContent = 'Listen to DJ Mixes and Sound Design projects';
-          //break;
-        //case 'LiveAV':
-          //description.textContent = 'View live-Audio and Visual productions';
-          //break;
-        //default:
-          //description.textContent = '';
-      //}
-      //description.style.display = 'block';
-    //}
-
     function hideDescription() {
       const description = document.getElementById('description');
       description.style.display = 'none';
     }
 
-    // Matrix Digital Rain effect code
     const canvas = document.getElementById("bgCanvas");
     const ctx = canvas.getContext("2d");
 
-    // Make the canvas fill the entire screen
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -387,7 +225,7 @@
       ctx.fillStyle = "rgba(0, 0, 0, .05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#00ff00"; 
+      ctx.fillStyle = "#00ff00";
       ctx.font = `${fontSize}px Courier`;
 
       drops.forEach(drop => {

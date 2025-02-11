@@ -17,7 +17,7 @@
   width: 45%;
   height: 100%;
   position: absolute;
-  top: 27.2%;
+  top: 30.2%;
   left: 50%;
   transform: translate(-50%, -15%);
 }
@@ -27,7 +27,7 @@ body {
   background-color: #0000;
   flex-direction: column;
   align-items: center;
-  margin: 15px;
+  margin: 0;
   padding: 0;
   display: flex;
   overflow-x: hidden;
@@ -35,20 +35,18 @@ body {
 
 header {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .title-button {
-  cursor: pointer;
+  cursor: none;
   color: #000;
-  text-shadow: 0 0 10px #0077b5e6, 0 0 5px #0077b599, 0 0 2px #0077b5cc inset;
+  text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #0077b5e6;
   filter: drop-shadow(0 0 10px #0077b5);
-  margin-bottom: 75px;
   font-family: Audiowide, sans-serif;
   font-size: 110px;
   text-decoration: none;
-  animation: 2s infinite alternate outline-glow;
-  position: relative;
+  animation: 2s infinite alternate title-glow;
 }
 
 @keyframes outline-glow {
@@ -63,51 +61,34 @@ header {
 
 .title-button:hover {
   color: #000;
-  text-shadow: 4.5px 4.5px #fff, 5px 2px #c50e5a, 5px 5px #fff;
-}
-
-.title-button:after {
-  content: "";
-  transform-origin: 100% 100%;
-  background-color: #0e94c5;
-  width: 100%;
-  height: 5px;
-  transition: transform .5s ease-out;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  box-shadow: 0 0 #c50e5a, 0 0 #c50e5a;
-}
-
-.title-button:hover:after {
-  transform-origin: 0 100%;
-  transform: scaleX(0);
+  text-shadow: 0 0 10px #ffffffe6, 0 0 5px tomato;
+  animation: none;
 }
 
 .videos-container {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   height: auto;
   margin: auto;
   display: flex;
 }
 
 .video {
-  flex: 0 calc(50% - 20px);
-  max-width: 500px;
+  flex: 0 calc(100% - 10px);
+  max-width: 480px;
+  position: relative;
 }
 
 video {
   width: 100%;
-  height: auto;
+  height: 640px;
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 480px) {
   .video {
     max-width: 100%;
   }
@@ -116,13 +97,14 @@ video {
 .overlay-button {
   color: #000;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1;
+  pointer-events: auto;
   background-color: #ffffff80;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   font-family: Audiowide, sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   display: none;
   position: absolute;
   top: 50%;
@@ -131,97 +113,45 @@ video {
 }
 
 .video:hover .overlay-button {
+  pointer-events: auto;
   display: block;
-}
-
-.video {
-  position: relative;
 }
 
 .text-section {
   text-align: center;
   color: #fff;
   text-shadow: 0 0 6px #fffc, 0 0 12px #fff9, 0 0 18px #fff6;
-  padding: 10px;
+  margin-top: -55px;
+  padding: 5px;
   font-size: 38px;
 }
 
-@media screen and (width <= 768px) {
-  .description {
-    font-size: 18px;
-    top: 90%;
-  }
-}
-
-.text-section p + .description {
-  display: block;
-}
-
-.footer-list {
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-
-footer {
-  text-align: center;
-  width: 100%;
-  margin-top: auto;
-  padding: 5px;
-}
-
-.about-button {
+.qa-link {
   color: #000;
-  background: linear-gradient(90deg, #0077b5, #c50e5a);
-  border-radius: 25px;
-  align-items: center;
-  padding: 5px 10px;
+  text-shadow: 0 0 10px #0077b5e6, 0 0 5px #0077b599, 0 0 2px #0077b5cc;
   font-family: Audiowide, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 42px;
   text-decoration: none;
-  transition: background .4s, transform .2s, box-shadow .3s;
-  display: inline-flex;
-  position: relative;
-  box-shadow: 0 4px 6px #0003;
 }
 
-.about-button:hover {
-  background: linear-gradient(90deg, #1e90ff, #0077b5);
-  transform: scale(1.1);
-  box-shadow: 0 3px 6px #1e90ff99, 0 0 15px #1e90ff80;
-}
-
-body {
-  background-color: color: #0f0;
-  font-family: Courier New, Courier, monospace;
-  overflow: hidden;
-}
-
-canvas {
-  z-index: -1;
-  position: absolute;
-  top: 50px;
-  left: 0;
+.qa-link:hover {
+  color: #0077b5;
+  text-shadow: 0 0 15px #000;
 }
 </style>
 </head>
-
 <body>
   <canvas id="bgCanvas"></canvas>
 
   <header>
-    <div class="title-wrapper" onclick="location.href='index.html';">
+    <div class="title-wrapper"></div>
       <div class="title-button">Ruben Perez</div>
-    </div>
+    
   </header>
 
   <div class="videos-container">
     <div class="video">
-      <a href="/electronics.html" class="video-link" onmouseover="showDescription('Electronics')" onmouseout="hideDescription()">
+      <a href="/electronics.html" class="video-link">
         <video autoplay="" loop="" muted="">
           <source src="/cyberpunk_AR.3d7708dd.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -230,18 +160,8 @@ canvas {
       </a>
     </div>
 
-    <!--<div class="video">
-      <a href="sounds.html" class="video-link" onmouseover="showDescription('Sounds')" onmouseout="hideDescription()">
-        <video autoplay loop muted>
-          <source src="media/cyberpunk_beats.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <button class="overlay-button">DJ Mixes & Sound Design</button>
-      </a>
-    </div> -->
-
     <div class="video">
-      <a href="/liveAV.html" class="video-link" onmouseover="showDescription('LiveAV')" onmouseout="hideDescription()">
+      <a href="/liveAV.html" class="video-link">
         <video autoplay="" loop="" muted="">
           <source src="/cyberpunk_liveAV.08490ebd.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -252,68 +172,16 @@ canvas {
   </div>
 
   <section class="text-section cyber-outline">
-    <p>QA & AV Systems Engineer</p>
+    <a href="/about.html" class="qa-link">QA & AV Systems Engineer</a>
     <div class="description" id="description"></div>
-</section>
+  </section>
 
-<style>.cyber-outline p {
-  color: #000;
-  text-shadow: 0 0 10px #0077b5e6, 0 0 5px #0077b599, 0 0 2px #0077b5cc inset;
-  filter: drop-shadow(0 0 10px #0077b5);
-  font-family: Audiowide, sans-serif;
-  font-size: 42px;
-  animation: 2s infinite alternate outline-glow;
-}
-
-@keyframes outline-glow {
-  0% {
-    text-shadow: 0 0 5px #0077b5cc, 0 0 15px #0077b599, 0 0 3px #0077b5e6 inset;
-  }
-
-  100% {
-    text-shadow: 0 0 15px #0077b5, 0 0 25px #0077b5cc, 0 0 5px #0077b5 inset;
-  }
-}
-</style>
-
-
-
-  <footer>
-    <nav>
-      <ul class="footer-list">
-        <li>
-          <a href="/About.html" class="about-button">About RP</a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
-
-  <script>// Description show/hide functions for video hover
-//function showDescription(type) {
-//const description = document.getElementById('description');
-//switch (type) {
-//case 'Electronics':
-//description.textContent = 'Explore innovative Test Demos and Electronics';
-//break;
-//case 'Sounds':
-//description.textContent = 'Listen to DJ Mixes and Sound Design projects';
-//break;
-//case 'LiveAV':
-//description.textContent = 'View live-Audio and Visual productions';
-//break;
-//default:
-//description.textContent = '';
-//}
-//description.style.display = 'block';
-//}
-function hideDescription() {
+  <script>function hideDescription() {
     const description = document.getElementById('description');
     description.style.display = 'none';
 }
-// Matrix Digital Rain effect code
 const canvas = document.getElementById("bgCanvas");
 const ctx = canvas.getContext("2d");
-// Make the canvas fill the entire screen
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
