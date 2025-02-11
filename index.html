@@ -78,18 +78,18 @@
   display: flex;
   justify-content: center; /* Centers the videos horizontally */
   align-items: center;
-  gap: 60px; /* Adds space between videos */
+  gap: 40px; /* Adds space between videos */
   flex-wrap: wrap; /* Ensures responsiveness */
   width: 100%;
-  max-width: 800px; /* Adjust as needed */
+  max-width: 1200px; /* Adjust as needed */
+  height: auto;
   margin: auto; /* Centers the entire container */
 }
 
 .video {
   flex: 0 1 calc(50% - 20px); /* Adjust width for centering */
-  max-width: 345px; /* Ensures better positioning */
-  position: relative;
-  margin: 75px 10px; /* Adds space between videos */
+  max-width: 500px; /* Ensures better positioning */
+  
 }
 
 
@@ -104,26 +104,33 @@
       }
     }
 
-    .overlay-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px 20px;
-      background-color: rgba(255, 255, 255, 0.5);
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      color: #000;
-      cursor: pointer;
-      display: none;
-      font-family: "Audiowide", sans-serif;
+    /* Updated overlay button CSS */
+.overlay-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  display: none;
+  font-family: "Audiowide", sans-serif;
+  z-index: 10; /* Ensure button is above the video */
+}
 
-    }
+.video:hover .overlay-button {
+  display: block;
+}
 
-    .video:hover .overlay-button {
-      display: block;
-    }
+/* Optional: Improve video container hover effect */
+.video {
+  position: relative; /* Needed for absolute positioning of the overlay */
+}
+
 
     .text-section {
   text-align: center;

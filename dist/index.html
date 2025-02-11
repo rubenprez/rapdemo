@@ -76,18 +76,17 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
+  height: auto;
   margin: auto;
   display: flex;
 }
 
 .video {
   flex: 0 calc(50% - 20px);
-  max-width: 345px;
-  margin: 75px 10px;
-  position: relative;
+  max-width: 500px;
 }
 
 video {
@@ -104,6 +103,7 @@ video {
 .overlay-button {
   color: #000;
   cursor: pointer;
+  z-index: 10;
   background-color: #ffffff80;
   border: none;
   border-radius: 5px;
@@ -119,6 +119,10 @@ video {
 
 .video:hover .overlay-button {
   display: block;
+}
+
+.video {
+  position: relative;
 }
 
 .text-section {
