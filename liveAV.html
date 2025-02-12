@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Ruben Perez III</title>
+  <title>Ruben Perez</title>
   <meta name="author" content="RubenPerezIII">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,7 @@
       align-items: center;
       background-size: cover;
       background-position: center;
+      color: #ffffff;
     }
 
     header {
@@ -30,43 +31,51 @@
       margin-top: 0;
     }
 
-    h1, h2, h3, h4, h5, h6, p, a {
-      text-align: center;
-      color: #c50e5a;
+
+    .title-button {
+      cursor: pointer;
+      text-decoration: none;
       font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      color: #000;
+      text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #0077b5e6;
+      filter: drop-shadow(0px 0px 10px #0077b5);
+      animation: title-glow 2s infinite alternate;
+    }
+     
+    @keyframes outline-glow {
+      0% { 
+        text-shadow: 
+          0 0 5px rgba(0, 119, 181, 0.8), 
+          0 0 15px rgba(0, 119, 181, 0.6), 
+          0 0 3px rgba(0, 119, 181, 0.9) inset;
+      }
+      100% { 
+        text-shadow: 
+          0 0 15px #0077b5, 
+          0 0 25px rgba(0, 119, 181, 0.8), 
+          0 0 5px rgba(0, 119, 181, 1) inset;
+      }
+    }
+     
+    .title-button:hover {
+      color: #000;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 5px #ff6347;
+      animation: none;
+    }
+    
+
+    h1, h2, h3, h4, h5, h6, p, a {
+      color: #c50e5a;
+      font-family: 'Roboto', sans-serif;
       font-size: 24px;
+      text-align: center;
     }
 
     h1.text-effect {
       font-size: 75px;
     }
 
-    .title-button:hover {
-      color: #000000; 
-      text-shadow: 4.5px 4.5px 0px #ffffff, 5px 2px 0px #c50e5a, 5px 5px 0px #ffffff;
-    }
-
-    .title-button::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background-color: #0e94c5;
-      box-shadow: 0 0 0px #c50e5a, 0 0 0px #c50e5a;
-      transform: scaleX(0);
-      transform-origin: bottom right;
-      transition: transform 0.5s ease-out;
-    }
-
-    .title-button:hover::after {
-      transform: scaleX(0);
-      transform-origin: bottom left;
-    }
-
-
-    
     .videos-container {
       display: flex;
       flex-direction: column;
@@ -92,71 +101,18 @@
       font-family: "Audiowide", sans-serif;
     }
 
-  /* Slideshow container */
-  .slideshow-container {
-  max-width: native;
-  position: relative;
-  margin: 10px auto;
-}
-
-/* The images inside the slideshow */
-.mySlides img {
-  width: 640px;  /* Full HD width */
-  height: 640px; /* Full HD height */
-  object-fit: cover; /* Ensures the image fills the box while maintaining aspect ratio */
-}
-
-
-    .mySlides {
-      display: none;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-
-    @keyframes fade {
-      from {opacity: 0.4} 
-      to {opacity: 1}
-    }
+ 
   </style>
 </head>
 
 <body>
-
+  
   <header>
-    <div class="title-button" onclick="location.href='index.html';">Ruben Perez</div>
+    <div class="title-wrapper"></div>
+      <div class="title-button"onclick="location.href='index.html';">Ruben Perez</div>
+    </div>
   </header>
+  
 
   <!-- Videos container -->
   <div class="videos-container" id="videos-container">
@@ -203,7 +159,7 @@
     <iframe src="https://player.vimeo.com/video/1019020762?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
       frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Jazzalley"></iframe>
   </div>
-<!-
+<!--
   <!-- Image slideshow 
   <div class="slideshow-container">
     <!-- Slide 1 
@@ -253,7 +209,7 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div> -->
 
-  <!-- JavaScript for slideshow -->
+  <!-- JavaScript for slideshow 
   <script>
   let slideIndex = 0;
   showSlides();
@@ -273,8 +229,8 @@
   function plusSlides(n) {
     slideIndex += n - 1;
     showSlides();
-  }
-  </script>
+  } -->
+  </script> 
 
 </body>
 
