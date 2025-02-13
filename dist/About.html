@@ -20,32 +20,29 @@
 
   <style>body {
   color: #fff;
-  background-color: #000;
+  background-color: #0000;
   flex-direction: column;
   align-items: center;
-  margin: 5px;
+  margin: 0;
   padding: 0;
+  font-family: Roboto, sans-serif;
   display: flex;
   overflow-x: hidden;
 }
 
 header {
   text-align: center;
-  margin-top: 0;
+  margin-top: 25px;
 }
 
 .title-button {
-  cursor: pointer;
-  color: #0077b5;
-  margin-bottom: 0;
+  color: #000;
+  text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6;
+  filter: drop-shadow(0 0 10px #0077b5);
   font-family: Audiowide, sans-serif;
   font-size: 110px;
   text-decoration: none;
-}
-
-.title-button:hover {
-  color: #0077b5;
-  text-shadow: 4.5px 4.5px #00267d, 5px 2px #c50e5a, 5px 5px #ffea00;
+  animation: 2s infinite alternate title-glow;
 }
 
 .linkedin-button {
@@ -71,23 +68,28 @@ header {
 .linkedin-button a:hover {
   background: linear-gradient(90deg, #1e90ff, #0077b5);
   transform: scale(1.1);
-  box-shadow: 0 3px 6px #1e90ff99, 0 0 15px #1e90ff80;
+  box-shadow: 0 3px 6px #1e90ff99;
 }
 
-.video-container {
-  border: 2px solid #fff3;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 1280px;
-  margin: 30px auto;
-  overflow: hidden;
-  box-shadow: 0 4px 8px #00000080;
+.about-me {
+  text-align: left;
+  max-width: 800px;
+  padding: 50px 20px;
+  line-height: 1.6;
 }
 
-.video-container iframe {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  height: auto;
+.about-me h2 {
+  text-align: center;
+  color: #0077b5;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.about-me p {
+  color: #ddd;
+  margin-bottom: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
 }
 </style>
 </head>
@@ -100,17 +102,31 @@ header {
 
   <div class="linkedin-button">
     <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
-     Linked<i class="fab fa-linkedin"></i>
+      Linked<i class="fab fa-linkedin"></i>
     </a>
   </div>
 
-  <!--<div class="video-container">
-    <iframe 
-      src="https://player.vimeo.com/video/1043633725?badge=0&amp;autopause=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;quality=1080p" 
-      frameborder="0" 
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-      title="Proficiency">
-    </iframe>
-  </div>-->
-<script src="/about.cad4fa1f.js"></script></body>
+  <!-- About Me Section -->
+  <section class="about-me">
+    <h2>about the engineer</h2>
+
+    <p><strong>Passion for Art, Multimedia, and Technology</strong><br>
+    With over 15 years of experience in <strong>audio-visual production, multimedia content creation, and quality assurance</strong>, I have dedicated my career to the intersection of <strong>technology and creativity</strong>. Whether it's <strong>sound design, video production, or software testing</strong>, I thrive in environments that challenge me to push artistic and technical boundaries.</p>
+
+    <p><strong>Sound and Music</strong><br>
+    Music has always been a driving force in my journey. From <strong>live sound engineering and studio recording</strong> to <strong>sound design for immersive experiences</strong>, I find deep satisfaction in shaping the way people <strong>hear and feel</strong> audio. I have had the privilege of working with <strong>Grammy-winning artists</strong>, fine-tuning audio experiences in <strong>concert venues, recording studios, and multimedia projects</strong>.</p>
+
+    <p><strong>Video and Film</strong><br>
+    Visual storytelling is another passion of mine. Whether it's <strong>editing in Final Cut Pro, designing visual effects</strong>, or <strong>ensuring video quality through rigorous testing</strong>, I believe that <strong>sound and visuals must work in harmony</strong> to create truly impactful media. My experience spans across <strong>film, gaming, AR/VR, and interactive experiences</strong>, ensuring that both <strong>technical precision and artistic vision</strong> come together seamlessly.</p>
+
+    <p><strong>Problem-Solving and Testing</strong><br>
+    As a <strong>QA Engineer and multimedia tester</strong>, I bring a <strong>detail-oriented and analytical approach</strong> to every project. I enjoy <strong>troubleshooting complex issues, refining workflows, and ensuring that creative tools meet the highest industry standards</strong>. My experience with platforms like <strong>Jira, TestRail, Python automation, Unreal Engine, and multimedia software testing</strong> allows me to bridge the gap between <strong>technical development and creative execution</strong>.</p>
+
+    <p><strong>Creativity and Professionalism</strong><br>
+    I approach every project with <strong>passion, precision, and professionalism</strong>. Whether I’m working with <strong>artists, engineers, or developers</strong>, I strive to <strong>foster collaboration, enhance creative workflows, and push the boundaries of innovation</strong>. My mission is to ensure that <strong>art, technology, and quality</strong> come together to create seamless, high-impact experiences.</p>
+
+    <p>If you’d like to collaborate or learn more about my work, feel free to <strong>connect with me via LinkedIn!</strong></p>
+  </section>
+
+<script src="/About.36da4070.js"></script></body>
 </html>
