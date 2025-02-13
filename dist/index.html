@@ -121,6 +121,8 @@ video {
   text-align: center;
   color: #fff;
   text-shadow: 0 0 6px #fffc, 0 0 12px #fff9, 0 0 18px #fff6;
+  pointer-events: auto;
+  z-index: 10;
   margin-top: -55px;
   padding: 5px;
   font-size: 38px;
@@ -129,14 +131,15 @@ video {
 .qa-link {
   color: #000;
   text-shadow: 0 0 10px #0077b5e6, 0 0 5px #0077b599, 0 0 2px #0077b5cc;
+  user-select: text;
   font-family: Audiowide, sans-serif;
   font-size: 42px;
   text-decoration: none;
 }
 
 .qa-link:hover {
-  color: #0077b5;
-  text-shadow: 0 0 15px #000;
+  color: #000;
+  text-shadow: 0 0 15px #fff;
 }
 </style>
 </head>
@@ -151,25 +154,22 @@ video {
 
   <div class="videos-container">
     <div class="video">
-      <a href="/electronics.html" class="video-link">
         <video autoplay="" loop="" muted="">
-          <source src="/cyberpunk_AR.3d7708dd.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+            <source src="/cyberpunk_AR.3d7708dd.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <button class="overlay-button">Test Tools & Electronics</button>
-      </a>
+        <button class="overlay-button" onclick="location.href='electronics.html'">Test Tools & Electronics</button>
     </div>
 
     <div class="video">
-      <a href="/liveAV.html" class="video-link">
         <video autoplay="" loop="" muted="">
-          <source src="/cyberpunk_liveAV.08490ebd.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+            <source src="/cyberpunk_liveAV.08490ebd.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <button class="overlay-button">Live-Production Audio Visual</button>
-      </a>
+        <button class="overlay-button" onclick="location.href='liveAV.html'">Live-Production Audio Visual</button>
     </div>
-  </div>
+</div>
+
 
   <section class="text-section cyber-outline">
     <a href="/about.html" class="qa-link">QA & AV Systems Engineer</a>

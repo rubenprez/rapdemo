@@ -128,26 +128,34 @@
     }
 
     .text-section {
-      text-align: center;
-      padding: 5px;
-      margin-top: -55px;
-      color: #fff;
-      font-size: 38px;
-      text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6), 0 0 18px rgba(255, 255, 255, 0.4);
-    }
+  text-align: center;
+  padding: 5px;
+  margin-top: -55px;
+  color: #fff;
+  font-size: 38px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 
+               0 0 12px rgba(255, 255, 255, 0.6), 
+               0 0 18px rgba(255, 255, 255, 0.4);
+  pointer-events: auto; /* Ensure it can be interacted with */
+  z-index: 10; /* Higher than video elements */
+}
 
-    .qa-link {
-      font-size: 42px;
-      color: #000;
-      text-decoration: none;
-      font-family: "Audiowide", sans-serif;
-      text-shadow: 0 0 10px rgba(0, 119, 181, 0.9), 0 0 5px rgba(0, 119, 181, 0.6), 0 0 2px rgba(0, 119, 181, 0.8);
-    }
+.qa-link {
+  font-size: 42px;
+  color: #000;
+  text-decoration: none;
+  font-family: "Audiowide", sans-serif;
+  text-shadow: 0 0 10px rgba(0, 119, 181, 0.9), 
+               0 0 5px rgba(0, 119, 181, 0.6), 
+               0 0 2px rgba(0, 119, 181, 0.8);
+  user-select: text; /* Allow text selection */
+}
 
-    .qa-link:hover {
-      color: #0077b5;
-      text-shadow: 0 0 15px #000000;
-    }
+.qa-link:hover {
+  color: #000000;
+  text-shadow: 0 0 15px #ffffff;
+}
+
   </style>
 </head>
 <body>
@@ -161,25 +169,22 @@
 
   <div class="videos-container">
     <div class="video">
-      <a href="electronics.html" class="video-link">
         <video autoplay loop muted>
-          <source src="media/cyberpunk_AR.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+            <source src="media/cyberpunk_AR.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <button class="overlay-button">Test Tools & Electronics</button>
-      </a>
+        <button class="overlay-button" onclick="location.href='electronics.html'">Test Tools & Electronics</button>
     </div>
 
     <div class="video">
-      <a href="liveAV.html" class="video-link">
         <video autoplay loop muted>
-          <source src="media/cyberpunk_liveAV.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+            <source src="media/cyberpunk_liveAV.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <button class="overlay-button">Live-Production Audio Visual</button>
-      </a>
+        <button class="overlay-button" onclick="location.href='liveAV.html'">Live-Production Audio Visual</button>
     </div>
-  </div>
+</div>
+
 
   <section class="text-section cyber-outline">
     <a href="about.html" class="qa-link">QA & AV Systems Engineer</a>
