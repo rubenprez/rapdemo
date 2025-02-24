@@ -12,12 +12,15 @@
   <link rel="stylesheet" href="/index.47ca9330.css">
   <link rel="stylesheet" type="css/extra.css" href="/index.26871b4a.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Audiowide" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" onload="this.onload=null;this.rel='stylesheet'">
+ 
   <style>#bgCanvas {
   z-index: -1;
   width: 45%;
-  height: 100%;
+  height: 85vh;
   position: absolute;
-  top: 30.2%;
+  top: 27.5%;
   left: 50%;
   transform: translate(-50%, -15%);
 }
@@ -40,12 +43,27 @@ header {
 
 .title-button {
   color: #000;
-  text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #0077b5e6;
+  text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
   filter: drop-shadow(0 0 10px #0077b5);
   font-family: Audiowide, sans-serif;
   font-size: 110px;
   text-decoration: none;
   animation: 2s infinite alternate title-glow;
+}
+
+.subtitle {
+  color: #000;
+  text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
+  filter: drop-shadow(0 0 10px #0077b5);
+  text-align: center;
+  font-family: Audiowide, sans-serif;
+  font-size: 36px;
+  text-decoration: none;
+  animation: 2s infinite alternate title-glow;
+  position: relative;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @keyframes outline-glow {
@@ -58,21 +76,15 @@ header {
   }
 }
 
-.title-button:hover {
-  color: #000;
-  text-shadow: 0 0 10px #ffffffe6, 0 0 5px tomato;
-  animation: none;
-}
-
 .videos-container {
-  flex-wrap: wrap;
+  flex-wrap: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin: auto;
+  margin: -80px auto auto;
   display: flex;
 }
 
@@ -118,38 +130,45 @@ video {
 
 .text-section {
   text-align: center;
-  padding: px;
   color: #fff;
   text-shadow: 0 0 6px #fffc, 0 0 12px #fff9, 0 0 18px #fff6;
   pointer-events: auto;
   z-index: 10;
   margin-top: -25px;
+  padding: 0;
   font-size: 38px;
 }
 
 .qa-link {
   color: #000;
-  text-shadow: 0 0 10px #0077b5e6, 0 0 5px #0077b599, 0 0 2px #0077b5cc;
-  user-select: text;
+  text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
+  filter: drop-shadow(0 0 10px #0077b5);
+  text-align: center;
   font-family: Audiowide, sans-serif;
-  font-size: 42px;
+  font-size: 36px;
   text-decoration: none;
+  animation: 2s infinite alternate title-glow;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .qa-link:hover {
-  color: #000000e6;
-  text-shadow: 0 0 15px #ffffffe6;
+  color: #0077b5e6;
+  text-shadow: 0 0 25px #000000e6;
 }
 </style>
 </head>
 <body>
   <canvas id="bgCanvas"></canvas>
-
   <header>
-    <div class="title-wrapper"></div>
+    <div class="title-wrapper">
       <div class="title-button">Ruben Perez</div>
-    
+      <p class="subtitle">QA & AV Systems Engineer</p>
+    </div>
   </header>
+  
 
   <div class="videos-container">
     <div class="video">
@@ -171,7 +190,7 @@ video {
 
 
   <section class="text-section cyber-outline">
-    <a href="/About.html" class="qa-link">QA & AV Systems Engineer</a>
+    <a href="/About.html" class="qa-link">connnect</a>
     <div class="description" id="description"></div>
   </section>
 
