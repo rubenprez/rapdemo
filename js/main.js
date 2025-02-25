@@ -95,3 +95,7 @@ function prevPhoto() {
 // Show the first photo initially
 showPhoto(currentPhotoIndex);
 
+window.addEventListener('load', function () {
+  document.querySelector('.title-button').style.opacity = '1';
+  document.querySelector('.subtitle').style.opacity = '1';
+});
