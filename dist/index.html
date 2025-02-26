@@ -164,12 +164,18 @@ a {
   text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
   filter: drop-shadow(0 0 10px #0077b5);
   text-align: center;
+  z-index: 2;
+  background-color: #000c;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 375px;
+  padding: 6px 2px;
   font-family: Audiowide, sans-serif;
   font-size: 36px;
   text-decoration: none;
   animation: 2s infinite alternate title-glow;
-  position: absolute;
-  bottom: 50px;
+  position: fixed;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
