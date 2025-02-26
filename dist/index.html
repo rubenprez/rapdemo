@@ -81,46 +81,52 @@ header {
 }
 
 .videos-container {
-  flex-wrap: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: -80px auto auto;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
   display: flex;
 }
 
 .video {
-  flex: 0 calc(100% - 10px);
+  flex: 45%;
   max-width: 480px;
   position: relative;
+  top: -20px;
 }
 
-video {
+.video video {
+  border-radius: 8px;
   width: 100%;
-  height: 640px;
+  height: auto;
 }
 
-@media screen and (width <= 480px) {
+@media (width <= 768px) {
+  .videos-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .video {
-    max-width: 100%;
+    flex: 100%;
   }
 }
 
 .overlay-button {
   color: #000;
   cursor: pointer;
-  z-index: 1;
-  pointer-events: auto;
-  background-color: #ffffff80;
-  border: none;
+  z-index: 2;
+  opacity: 0;
+  background-color: #0077b599;
   border-radius: 5px;
   padding: 10px 20px;
   font-family: Audiowide, sans-serif;
   font-size: 24px;
-  display: none;
+  transition: opacity .3s ease-in-out;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -128,8 +134,18 @@ video {
 }
 
 .video:hover .overlay-button {
-  pointer-events: auto;
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
   display: block;
+  position: relative;
+}
+
+.video {
+  display: inline-block;
+  position: relative;
 }
 
 .text-section {
@@ -176,25 +192,30 @@ video {
 
   <div class="videos-container">
     <div class="video">
+      <a href="/electronics.html">
         <video autoplay="" loop="" muted="">
             <source src="/cyberpunk_AR.3d7708dd.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <button class="overlay-button" onclick="window.location.href='electronics.html'">Test Tools & Electronics</button>
-      </div>
+    <button class="overlay-button">Test Tools & Electronics</button> <!-- Add this -->
+   </a>
+  </div>
 
     <div class="video">
-        <video autoplay="" loop="" muted="">
-            <source src="/cyberpunk_liveAV.08490ebd.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <button class="overlay-button" onclick="location.href='liveAV.html'">Live-Production Audio Visual</button>
-    </div>
+        <a href="/liveAV.html">
+            <video autoplay="" loop="" muted="">
+                <source src="/cyberpunk_liveAV.08490ebd.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>      
+        <button class="overlay-button">Audio Visual</button> <!-- Add this -->
+      </a>
+  </div>
 </div>
 
 
+
   <section class="text-section cyber-outline">
-    <a href="/About.html" class="qa-link">connnect</a>
+    <a href="/About.html" class="qa-link">Skills & Expertise</a>
     <div class="description" id="description"></div>
   </section>
 
