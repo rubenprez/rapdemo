@@ -173,18 +173,48 @@ th {
   color: #fff;
   background-color: #0e94c5;
 }
+
+.title-button {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  background-color: #006da8;
+  border-radius: 20px;
+  padding: 3px 5px;
+  font-size: 20px;
+  transition: opacity 1.5s ease-in-out;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title-button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 </style>
 </head>
-
 <body>
-
   <header>
-    <div class="title-wrapper"></div>
-      <div class="title-button" onclick="location.href='index.html';">◂◂</div>
+    <div class="title-wrapper" onclick="location.href='index.html';">
+      <div class="title-button">
+        ◂◂
+        <span class="tooltip">Return to Main</span>
+      </div>
       <p class="subtitle">Test Tools &</p>
       <p class="subtitle">Electronics</p>
-    
+    </div>
   </header>
+
 
   <div class="description-box">
     <!-- Container for Bluetooth Scanner -->

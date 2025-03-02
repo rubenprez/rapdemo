@@ -141,16 +141,54 @@
   a:hover {
     text-decoration: underline;
   }
+   
+
+  .title-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #006da8;
+  color: #000000;
+  text-align: center;
+  padding: 3px 5px;
+  border-radius: 20px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 40px; /* Position below the element */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.title-button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
 </style>
 </head>
 <body>
   <header>
     <div class="title-wrapper" onclick="location.href='index.html';">
-      <div class="title-button">◂◂</div>
+      <div class="title-button">
+        ◂◂
+        <span class="tooltip">Return to Main</span>
+      </div>
       <p class="subtitle">Skills &</p>
       <p class="subtitle">Expertise</p>
     </div>
   </header>
+  
 
   <div class="linkedin-button">
     <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
