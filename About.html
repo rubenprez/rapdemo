@@ -42,8 +42,8 @@
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
       color: #000;
-      text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6;
-      filter: drop-shadow(0px 0px 10px #0077b5);
+      text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
+      filter: drop-shadow(5px 0px 5px #0077b5);
       animation: title-glow 2s infinite alternate;
     }
 
@@ -153,9 +153,10 @@
 
 /* Tooltip Style */
 .tooltip {
+  color: #657882; /* Bright grey text */
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.9); /* Bright glowing effect */
+  background: rgba(0, 0, 0, 0.85); /* Slightly more transparent background */
   visibility: hidden;
-  background: #000000d9; /* Darker for better readability */
-  color: #fff; /* White text for contrast */
   text-align: center;
   padding: 10px 8px; /* More padding for readability */
   border-radius: 6px;
@@ -164,15 +165,13 @@
   position: absolute;
   bottom: 21%; /* Move it above the button */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
   z-index: 10;
   box-shadow: 0px 4px 6px rgba(71, 61, 61, 0.3); /* Subtle shadow */
 }
-
-
 
 /* Show Tooltip on Hover */
 .title-button:hover .tooltip {
@@ -217,7 +216,7 @@
 <p>With nearly 10 years in Quality Assurance and multimedia content validation, subject matters including spatial audio, image & video processing, interactive HMD AR/VR, and streaming video conferencing. I ensure software and hardware meet the highest performance standards. I thrive in fast-paced environments, solving complex problems to enhance user experiences.</p>
 
   <div class="skills">
-    <h3>- Technical QA Skills -</h3>
+    <h3>▪ Technical QA Skills ▪</h3>
     <h3>Operating Systems:</h3>
     <p>macOS, Windows</p>
 
@@ -238,7 +237,7 @@
   <p>I’m deeply invested in multimedia production, always exploring new tools that push creative and technical boundaries. Whether it's sound design, video editing, visual effects, or lighting design, I strive to create seamless, immersive experiences.</p>
 
   <div class="audio-visual-skills">
-    <h3>- Technical AV Skills -</h3>
+    <h3>▪ Technical AV Skills ▪</h3>
     <h3>[DAW] Audio Production Recording & Editing Software:</h3>
     <p>Ableton Live, Pro Tools</p>
 
@@ -255,7 +254,7 @@
     <p>Kaiber Superstudio [Runway video, Flux image flows], Midjourney</p>
   </div>
 
-  <p>| Have a project or opportunity in mind? Let’s connect on <a href="https://www.linkedin.com" target="_blank"><strong>LinkedIn!</strong></a> |</p>
+  <p>🚀 Have a project or opportunity in mind? Let’s connect on <a href="https://www.linkedin.com" target="_blank"><strong>LinkedIn!</strong></a> </p>
 
 </section>
 </body>
