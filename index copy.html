@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ruben Perez</title>
+  <meta name="author" content="RubenPerezIII">
+  <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Audiowide" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" onload="this.onload=null;this.rel='stylesheet'">
+ 
+  <style>
+    /* Ensure full-screen canvas backdrop */
+    #bgCanvas {
+      position: absolute;
+      top: 27.5%; 
+      left: 50%;
+      width: 45%;
+      height: 85vh;
+      z-index: -1;
+      transform: translate(-50%, -15%);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      background-color: transparent;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .title-button {
+      text-decoration: none;
+      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      color: #000;
+      text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
+      filter: drop-shadow(0px 0px 10px #0077b5);
+      animation: title-glow 2s infinite alternate;
+      opacity: 100;
+    transition: opacity 0.5s ease-in-out;
+    }
+
+    .subtitle {
+      text-decoration: none;
+      font-family: "Audiowide", sans-serif;
+      font-size: 36px;
+      color: #000;
+      text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
+      filter: drop-shadow(0px 0px 10px #0077b5);
+      animation: title-glow 2s infinite alternate;
+      text-align: center;
+      position: relative;
+      top: -30px; /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 100;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+
+    @keyframes outline-glow {
+      0% { 
+        text-shadow: 
+          0 0 5px rgba(0, 119, 181, 0.8), 
+          0 0 15px #0077b599, 
+          0 0 3px rgba(0, 119, 181, 0.9) inset;
+      }
+      100% { 
+        text-shadow: 
+          0 0 15px #0077b5, 
+          0 0 25px rgba(0, 119, 181, 0.8), 
+          0 0 5px rgba(0, 119, 181, 1) inset;
+      }
+    }
+
+    .videos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Space between videos */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  width: 90%; /* Makes it more responsive */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.video {
+  flex: 1 1 45%; /* Allows flexible resizing, keeping videos around 45% width */
+  max-width: 480px; /* Ensures videos don't get too large */
+  position: relative;
+  top: -20px; /* Moves video down */
+}
+
+.video video {
+  width: 100%; /* Make videos responsive */
+  height: auto;
+  border-radius: 8px; /* Optional: smooth edges */
+}
+
+
+
+
+
+
+
+/* Stacking layout for smaller screens */
+@media (max-width: 768px) {
+  .videos-container {
+    flex-direction: column; /* Stack videos vertically */
+    gap: 20px; /* Adjust spacing */
+  }
+
+  .video {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}
+
+
+.overlay-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #0077b599;
+  border-radius: 10px;
+  font-size: 26px;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Audiowide", sans-serif;
+  z-index: 2;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video:hover .overlay-button {
+  opacity: 1;
+}
+
+a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.video {
+  position: relative;
+  display: inline-block;
+}
+
+
+    .text-section {
+  text-align: center;
+  padding: 0px;
+  margin-top: -25px;
+  color: #fff;
+  font-size: 38px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 
+               0 0 12px rgba(255, 255, 255, 0.6), 
+               0 0 18px rgba(255, 255, 255, 0.4);
+  pointer-events: auto; /* Ensure it can be interacted with */
+  z-index: 10; /* Higher than video elements */
+}
+
+.qa-link {
+  text-decoration: none;
+  font-family: "Audiowide", sans-serif;
+  font-size: 26px;
+  color: #000;
+  text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
+  filter: drop-shadow(0px 0px 10px #0077b5);
+  animation: title-glow 2s infinite alternate;
+  text-align: center;
+  
+  position: fixed; /* Keeps it at the bottom */
+  bottom: 20px; /* Adjust height for better visibility */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Ensures it scales well on mobile */
+  max-width: 275px; /* Prevents excessive width on larger screens */
+  padding: 6px 2px;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  border-radius: 20px;
+  z-index: 2; /* Ensures it stays on top */
+}
+
+
+.qa-link:hover {
+  color: #999;
+  text-shadow: 0px 0px 5px #000000;
+}
+
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+  <header>
+    <div class="title-wrapper">
+      <div class="title-button">Ruben Perez</div>
+      <p class="subtitle">QA & AV Systems Engineer</p>
+    </div>
+  </header>
+  
+
+  <div class="videos-container">
+    <div class="video">
+      <a href="electronics.html">
+        <video autoplay loop muted>
+            <source src="media/cyberpunk_AR.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <button class="overlay-button">Test Tools & Electronics</button> <!-- Add this -->
+   </a>
+  </div>
+
+    <div class="video">
+        <a href="liveAV.html">
+            <video autoplay loop muted>
+                <source src="media/cyberpunk_liveAV.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>      
+        <button class="overlay-button">Audio & Visual</button> <!-- Add this -->
+      </a>
+  </div>
+</div>
+
+
+
+  <section class="text-section cyber-outline">
+    <a href="About.html" class="qa-link">About/Contact ⏎</a>
+    <div class="description" id="description"></div>
+  </section>
+
+  <script>
+    function hideDescription() {
+      const description = document.getElementById('description');
+      description.style.display = 'none';
+    }
+
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    const characters = "hire Ruben Anthony Perez III 01-12-85";
+    const drops = [];
+    const fontSize = 18;
+    const columns = canvas.width / fontSize;
+
+    for (let i = 0; i < columns; i++) {
+      drops.push({
+        x: i * fontSize,
+        y: Math.random() * canvas.height,
+        speed: Math.random() * 3 + 2,
+        text: getRandomCharacter()
+      });
+    }
+
+    function getRandomCharacter() {
+      return characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    function animate() {
+      ctx.fillStyle = "rgba(0, 0, 0, .05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ff00";
+      ctx.font = `${fontSize}px Courier`;
+
+      drops.forEach(drop => {
+        drop.text = getRandomCharacter();
+        ctx.fillText(drop.text, drop.x, drop.y);
+        drop.y += drop.speed;
+
+        if (drop.y > canvas.height) {
+          drop.y = Math.random() * -100;
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
