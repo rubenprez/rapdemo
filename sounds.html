@@ -31,6 +31,8 @@
       align-items: center;
       background-size: cover;
       background-position: center;
+      font-family: 'Roboto', sans-serif;
+
     }
     header {
       text-align: center;
@@ -51,17 +53,21 @@
       font-size: 75px;
     }
     .title-button {
+      cursor: pointer;
       text-decoration: none;
       font-family: "Audiowide", sans-serif;
       font-size: 110px;
       color: #000;
       text-shadow: 0 0 10px #ffffffe6, 0 0 5px #0077b5e6, 0 0 2px #ffffffe6;
-      filter: drop-shadow(0px 0px 10px #0077b5);
+      filter: drop-shadow(0px 0px 5px #0077b5);
       animation: title-glow 2s infinite alternate;
-      opacity: 100;
-      transition: opacity 0.5s ease-in-out;
-      cursor: pointer;
+    }
 
+
+    .title-button:hover {
+      color: #000;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 10px #ffffff;
+      animation: none;
     }
 
     .subtitle {
@@ -74,12 +80,13 @@
       animation: title-glow 2s infinite alternate;
       text-align: center;
       position: relative;
-      top: -30px; /* Adjust as needed */
+      top: 5px; /* Adjust as needed */
       left: 50%;
       transform: translateX(-50%);
       opacity: 100;
       transition: opacity 0.5s ease-in-out;
     }
+
 
 
     @keyframes outline-glow {
@@ -219,7 +226,7 @@
 
   <!-- Music section -->
   <section class="music-section" id="music-section">
-    <h2>SoundCloud DJ Mixes</h2>
+    <h2></h2>
     
     <!-- SoundCloud embedded playlist -->
 
