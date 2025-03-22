@@ -71,31 +71,66 @@
       transition: opacity 0.5s ease-in-out;
     }
 
-    .linkedin-button {
-      margin: 20px 0;
-      text-align: center;
-    }
+    .button-container {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 10px; /* Adjust spacing between buttons */
+    margin-top: 20px;
+}
 
-    .linkedin-button a {
-      color: #ffffff;
-      background: linear-gradient(90deg, #0077b5, #c50e5a);
-      font-size: 20px;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 25px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: bold;
-      transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+/* General Social Button Styling */
+.social-button a {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-    .linkedin-button a:hover {
-      background: linear-gradient(90deg, #1e90ff, #0077b5);
-      transform: scale(1.1);
-      box-shadow: 0 3px 6px #1e90ff99;
-    }
+/* LinkedIn Button */
+.social-button a[href*="linkedin"] {
+    background: linear-gradient(90deg, #0077b5, #005582);
+}
+
+.social-button a[href*="linkedin"]:hover {
+    background: linear-gradient(90deg, #1e90ff, #0077b5);
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px #1e90ff99;
+}
+
+/* YouTube Button */
+.social-button a[href*="youtube"] {
+    background: linear-gradient(90deg, #ff0000, #c50e5a);
+}
+
+.social-button a[href*="youtube"]:hover {
+    background: linear-gradient(90deg, #ff4d4d, #ff0000);
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px #ff4d4d99;
+}
+
+/* SoundCloud Button */
+.social-button a[href*="soundcloud"] {
+    background: linear-gradient(90deg, #ff7700, #ff5500);
+}
+
+.social-button a[href*="soundcloud"]:hover {
+    background: linear-gradient(90deg, #ff5500, #ff3300);
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(255, 85, 0, 0.5);
+}
+
+/* Icon Styling */
+.social-button i {
+    font-size: 24px;
+}
+
 
     /* About Me Section */
     .about-me {
@@ -199,11 +234,29 @@
   </header>
   
 
-  <div class="linkedin-button">
-    <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
-      Linked<i class="fab fa-linkedin"></i>
-    </a>
-  </div>
+  <div class="button-container">
+    <!-- LinkedIn Button -->
+    <div class="social-button">
+        <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </div>
+
+    <!-- YouTube Button -->
+    <div class="social-button">
+        <a href="https://youtube.com/@rap-techknow?si=_ZBdFMXbXTxNCzoZ" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+    </div>
+
+    <!-- SoundCloud Button -->
+    <div class="social-button">
+        <a href="https://on.soundcloud.com/GRctzNgYfEgCasxn6" target="_blank">
+            <i class="fab fa-soundcloud"></i> SoundCloud
+        </a>
+    </div>
+</div>
+
 
 <!-- About Me Section -->
 <section class="about-me">

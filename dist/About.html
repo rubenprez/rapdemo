@@ -69,14 +69,15 @@ header {
   transform: translateX(-50%);
 }
 
-.linkedin-button {
-  text-align: center;
-  margin: 20px 0;
+.button-container {
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  display: flex;
 }
 
-.linkedin-button a {
+.social-button a {
   color: #fff;
-  background: linear-gradient(90deg, #0077b5, #c50e5a);
   border-radius: 25px;
   align-items: center;
   gap: 8px;
@@ -89,10 +90,38 @@ header {
   box-shadow: 0 4px 6px #0003;
 }
 
-.linkedin-button a:hover {
+.social-button a[href*="linkedin"] {
+  background: linear-gradient(90deg, #0077b5, #005582);
+}
+
+.social-button a[href*="linkedin"]:hover {
   background: linear-gradient(90deg, #1e90ff, #0077b5);
   transform: scale(1.1);
   box-shadow: 0 3px 6px #1e90ff99;
+}
+
+.social-button a[href*="youtube"] {
+  background: linear-gradient(90deg, red, #c50e5a);
+}
+
+.social-button a[href*="youtube"]:hover {
+  background: linear-gradient(90deg, #ff4d4d, red);
+  transform: scale(1.1);
+  box-shadow: 0 3px 6px #ff4d4d99;
+}
+
+.social-button a[href*="soundcloud"] {
+  background: linear-gradient(90deg, #f70, #f50);
+}
+
+.social-button a[href*="soundcloud"]:hover {
+  background: linear-gradient(90deg, #f50, #f30);
+  transform: scale(1.1);
+  box-shadow: 0 3px 6px #ff550080;
+}
+
+.social-button i {
+  font-size: 24px;
 }
 
 .about-me {
@@ -187,11 +216,33 @@ a:hover {
   </header>
   
 
-  <div class="linkedin-button">
-    <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
-      Linked<i class="fab fa-linkedin"></i>
-    </a>
-  </div>
+  <div class="button-container">
+    <!-- LinkedIn Button -->
+    <div class="social-button">
+        <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </div>
+
+    <!-- YouTube Button -->
+    <div class="social-button">
+        <a href="https://youtube.com/@rap-techknow?si=_ZBdFMXbXTxNCzoZ" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+    </div>
+
+    <!-- SoundCloud Button -->
+    <div class="social-button">
+        <a href="https://on.soundcloud.com/GRctzNgYfEgCasxn6" target="_blank">
+            <i class="fab fa-soundcloud"></i> SoundCloud
+        </a>
+    </div>
+</div>
+
+  
+
+
+
 
 <!-- About Me Section -->
 <section class="about-me">
