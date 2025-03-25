@@ -73,7 +73,9 @@
 
     .button-container {
     display: flex;
+    flex-direction: column; /* Stack buttons vertically */
     justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Center buttons horizontally */
     gap: 10px; /* Adjust spacing between buttons */
     margin-top: 20px;
 }
@@ -82,16 +84,23 @@
 .social-button a {
     color: #ffffff;
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 8px 0px;
     text-decoration: none;
-    border-radius: 25px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-weight: bold;
     transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 220px; /* Set a uniform width */
+    justify-content: center; /* Ensures the text and icon are centered */
 }
+
+/* Icon Styling */
+.social-button i {
+    font-size: 20px;
+}
+
 
 /* LinkedIn Button */
 .social-button a[href*="linkedin"] {
@@ -176,7 +185,7 @@
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
    
 
@@ -228,33 +237,34 @@
         ◂◂
         <span class="tooltip">Return to Main</span>
       </div>
-      <p class="subtitle">Skills &</p>
-      <p class="subtitle">Expertise</p>
+      <p class="subtitle"></p>
+      <p class="subtitle"></p>
     </div>
   </header>
   
 
   <div class="button-container">
-    <!-- LinkedIn Button -->
+    
+    <!-- SoundCloud Button -->
     <div class="social-button">
-        <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
+      <a href="https://on.soundcloud.com/GRctzNgYfEgCasxn6" target="_blank">
+          <i class="fab fa-soundcloud"></i> SoundCloud
+      </a>
     </div>
 
     <!-- YouTube Button -->
     <div class="social-button">
         <a href="https://youtube.com/@rap-techknow?si=_ZBdFMXbXTxNCzoZ" target="_blank">
-            <i class="fab fa-youtube"></i> YouTube
-        </a>
+          <i class="fab fa-youtube"></i> YouTube
+      </a>
     </div>
 
-    <!-- SoundCloud Button -->
+    <!-- LinkedIn Button -->
     <div class="social-button">
-        <a href="https://on.soundcloud.com/GRctzNgYfEgCasxn6" target="_blank">
-            <i class="fab fa-soundcloud"></i> SoundCloud
-        </a>
-    </div>
+      <a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+  </div>
 </div>
 
 

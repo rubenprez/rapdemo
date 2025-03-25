@@ -73,7 +73,9 @@
 
     .button-container {
     display: flex;
+    flex-direction: column; /* Stack buttons vertically */
     justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Center buttons horizontally */
     gap: 10px; /* Adjust spacing between buttons */
     margin-top: 20px;
 }
@@ -82,15 +84,16 @@
 .social-button a {
     color: #ffffff;
     font-size: 20px;
-    padding: 10px 20px;
+    padding: 8px 0px;
     text-decoration: none;
-    border-radius: 25px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-weight: bold;
     transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 220px; /* Set a uniform width */
+    justify-content: center; /* Ensures the text and icon are centered */
 }
 
 /* LinkedIn Button */
@@ -178,7 +181,7 @@
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration:line;
   }
    
 
@@ -230,8 +233,8 @@
         ◂◂
         <span class="tooltip">Return to Main</span>
       </div>
-      <p class="subtitle">Skills &</p>
-      <p class="subtitle">Expertise</p>
+      <p class="subtitle"></p>
+      <p class="subtitle"></p>
     </div>
   </header>
   
@@ -251,13 +254,13 @@
         </a>
     </div>
 
-    <!-- SoundCloud Button -->
+    <!-- SoundCloud Button 
     <div class="social-button">
         <a href="https://on.soundcloud.com/GRctzNgYfEgCasxn6" target="_blank">
             <i class="fab fa-soundcloud"></i> SoundCloud
         </a>
     </div>
-</div>
+</div>-->
 
   
 
