@@ -19,6 +19,14 @@ html {
   display: flex;
 }
 
+.title-inline .minititle {
+  font-size: 28px;
+}
+
+.title-inline .title-button {
+  font-size: 60px;
+}
+
 .text-effect {
   color: #0000;
   background-image: linear-gradient(to right, #aeccff, #507ccc, #1867b0);
